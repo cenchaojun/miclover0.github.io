@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.wrap{
+    width: 600px;
+    height: 600px;
+    margin: 50px auto;
+    
+    position: relative;
+    
+    overflow: hidden;
+}
+ul {
+    width: 600px;
+    height: 600px;
+}
+
+ul li {
+    
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    background-color: lightgray;
+    float: left;
+    /*border-left: 1px solid #000;
+    border-top: 1px solid #000;*/
+}
+
+ul li:nth-last-child(-n+20) {
+    border-bottom: 1px solid #000;
+}
+
+ul li:nth-child(20n) {
+    border-right: 1px solid #000;
+}
+
+.wrap div{
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    
+    background-color: pink;
+    border: 1px solid #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+}
+
+.wrap div:nth-child(3) {
+    left: 30px;
+}
+.wrap div:nth-child(4){
+    left: 60px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <ul class="area"></ul>
+</div>
+
+<script type="text/javascript" src="snake.js"></script>
+</body>
+</html>
+<!--
+
+1. 绘制蛇移动的时候的活动区域
+    每一个方格都是一个元素
+
+2. 初始化蛇的身体和位置
+
+3. 让蛇移动
+    判断是否游戏结束:
+        1. 判断是否撞墙
+        2. 是否吃到自己
+
+4. 投放食物
+    食物就是一个div, 把div随机生成一个位置.
+5. 吃食物
+    当射运动到食物的位置的时候, 把div添加到蛇的身体里面
+
+
+-->

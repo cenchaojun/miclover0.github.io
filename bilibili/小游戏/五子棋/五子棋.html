@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style>
+html, body, div {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: flex;
+}
+
+canvas {
+    margin: auto;
+    border: 1px solid #000;
+}
+
+</style>
+</head>
+<body>
+
+<div>
+    <canvas id="canvas" width="780" height="780">
+        你的浏览器不支持canvas
+    </canvas>
+</div>
+<script>
+/*
+ 1. 绘制棋盘
+ 2. 监听鼠标的点击事件
+ 
+ 把落下的每个棋子存起来 ：使用二维数组 存储的是棋子的类型  0 没有  1 白色  2 黑
+ * */
+var chesses;
+(function (){
+    var hasWin = false;
+
+    var whiteChess = new Image();
+    whiteChess.src = "./w.png";
+    var blackChess = new Image();
+    blackChess.src = "./b.png";
+    /*应该谁来落子  1 表示白色  2表示黑色*/
+    var whoChess = 1;
+    chesses = [];  //存储每个棋子
+    //给chesses数组初始化。 默认没有棋子
+    for (var i = 0; i < 15; i++){
+        chesses.push([]);
+        var row = chesses[i];
+        for (var j = 0; j < 15; j++){
+            row.push(0);
+        }
+    }
+
+    var canvas = document.getElementById("canvas");
+    if (!canvas.getContext) return;
+
+    var ctx = canvas.getContext("2d");
+    drawBoard(); //绘制棋盘
+
+    canvas.onclick = function (e){
+        if (hasWin){
+            ctx.clearRect(0, 0, 780, 780);
+            drawBoard();
+            for (var i = 0; i < 15; i++){
+                for (var j = 0; j < 15; j++){
+                    chesses[i][j] = 0;
+                }
+            }
+            hasWin = false;
+        }
+        var x = e.offsetX;
+        var y = e.offsetY;
+        drawChess(x, y);
+    }
+    /*绘制棋子*/
+    function drawChess(x, y){
+        x = Math.round((x - 40) / 50) * 50 + 40;
+        y = Math.round((y - 40) / 50) * 50 + 40;
+
+        if (!isAllowChess(x, y)) return; //如果不允许落子，就直接返回
+
+        var currentChess;
+        if (whoChess == 1){
+            currentChess = whiteChess;
+        }else{
+            currentChess = blackChess;
+        }
+        ctx.drawImage(currentChess, x - whiteChess.width / 2, y - whiteChess.height / 2);
+        chesses[(y - 40) / 50][(x - 40) / 50] = whoChess;
+        /*判赢*/
+        if (judgeWin((y - 40) / 50, (x - 40) / 50)){
+            ctx.save();
+            ctx.fillStyle = "red";
+            ctx.font = "60px sans-serif";
+            ctx.textAlign = "center";
+            if (whoChess == 1){
+                ctx.fillText("白棋赢了!!!", 390, 390);
+            }else{
+                ctx.fillText("黑棋赢了!!!", 390, 390);
+            }
+            ctx.restore();
+            hasWin = true;
+        }
+        /*下一次应该是白棋还是黑棋*/
+        whoChess = whoChess == 1 ? 2 : 1;
+    }
+    
+    /*判断是否允许落子*/
+    function isAllowChess(x, y){
+        if (x < 40 || y < 40 || x > 740 || y > 740){
+            return false;
+        }else if (chesses[(y - 40) / 50][(x - 40) / 50] > 0){
+            alert("此处不允许落子")
+            return false;
+        }
+        return true;
+    }
+    
+    /*绘制棋盘*/
+    function drawBoard(){
+        ctx.fillStyle = "lightgray";
+        for (let i = 0; i < 14; i++){
+            for (let j = 0; j < 14; j++){
+                ctx.fillRect(40 + j * 50, 40 + i * 50, 49, 49);
+            }
+        }
+    }
+    
+    /*i,j是刚刚落下的子在数组中的下标*/
+    function judgeWin(i, j){
+        if (judgeHorizontal(i, j)) return true;
+        if (judgeVertical(i, j))  return true;
+        if (judgeLeftRight(i, j))  return true;
+        if (judgeRightLeft(i, j))  return true;
+
+    }
+    
+    /*判断水平*/
+    function judgeHorizontal(i, j){
+        var c = whoChess;
+        for (; j >= 0 && chesses[i][j] == c; j--){  //向左跑，找到棋盘的边缘或者不是当前落下棋
+
+        }
+        ;
+        var count = 0;
+        for (j++; j < 15 && chesses[i][j] == c; j++){
+            count++;
+        }
+        if (count >= 5) return true;
+    }
+    
+    /*判断垂直*/
+    function judgeVertical(i, j){
+        var c = whoChess;
+        /*判垂直*/
+        for (; i >= 0 && chesses[i][j] == c; i--){  //向左跑，找到棋盘的边缘或者不是当前落下棋
+
+        }
+        count = 0;
+        for (i++; i < 15 && chesses[i][j] == c; i++){
+            count++;
+
+        }
+        console.log(count);
+        if (count >= 5) return true;
+    }
+    
+    /*斜着1*/
+    function judgeLeftRight(i, j){
+        var c = whoChess;
+
+        for (; i >= 0 && j >= 0 && chesses[i][j] == c; i--, j--){
+
+        }
+        count = 0;
+        for (i++, j++; i < 15 && j < 15 && chesses[i][j] == c; i++, j++){
+            count++;
+
+        }
+        if (count >= 5) return true;
+    }
+    
+    /*斜着2*/
+    function judgeRightLeft(i, j){
+        var c = whoChess;
+        for (; i >= 0 && j < 15 && chesses[i][j] == c; i--, j++){
+
+        }
+        count = 0;
+        for (i++, j--; i < 15 && j >= 0 && chesses[i][j] == c; i++, j--){
+            count++;
+
+        }
+        if (count >= 5) return true;
+    }
+})();
+
+</script>
+</body>
+</html>
