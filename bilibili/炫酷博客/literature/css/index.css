@@ -1,0 +1,32 @@
+@charset "gb2312";
+/*мф╪Ж*/
+body{ font-size:14px;}
+.tuijian {margin-top:30px;float:right; width:30%; overflow:hidden;}
+.rnav { width: 80%; margin: 20px auto; overflow: hidden; }
+.rnav li { width: 120px; text-align: center; display: inline-block; margin-bottom: 2px; height: 40px; line-height: 40px }
+.rnav li span{ color: #FFF; display: block; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s }
+.rnav1 { background: #e41637 }
+.rnav2 { background: #f16b17 }
+.rnav3 { background: #0f9c7c }
+.rnav4 { background: #46ce14 }
+.rnav li span:hover { background: rgba(255,255,255,0.2); -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); }
+
+.tuijian .wenxue h2{ color:yellow; margin-top:30px;}
+.tuijian .wenxue li{ text-align:left; color:#CCC;margin:15px 15px;}
+.tuijian .wenxue li span{ color:#FF3;}
+.tuijian .wenxue li a{ color:#CCC;-moz-transition: all 0.3s ease-in-out; 
+								-webkit-transition: all 0.3s ease-in-out; 
+								-o-transition: all 0.3s ease-in-out; 
+								-ms-transition: all 0.3s ease-in-out; 
+								transition: all 0.3s ease-in-out;}
+.tuijian .wenxue li a:hover{ color:#F00;}
+
+/*ндуб*/
+.wz{ margin-top:30px;width:70%; text-align:center; color:#CCC;}
+.wz hr{height:1px;border:none;border-top:1px dashed #0066CC; width:90%; margin:5px auto;}
+.wz artical p{ text-indent:2em; text-align:left; font-size:18px; margin:10px 10px; letter-spacing:0.2em;}
+.fgx { font-size:18px;width:100%; border:0; color:#F00;}
+.author{ margin-left:20px;}
+.author  li{ margin:15px auto;}
+.author  li a{ color:#999;}
+.author li span{ margin-right:2%;}

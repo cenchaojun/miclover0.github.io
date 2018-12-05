@@ -1,0 +1,44 @@
+
+/*日记*/
+.diary{width:60%;color:white; margin-top:30px; font-size:14px; background-image:url(../images/rj.png);}
+.newblog { text-indent:2em; margin: 20px 20px 20px 20px; border-bottom:white 1px dashed;position: relative;clear: both; display: inline-block;padding-bottom: 20px;padding:10px;}
+.newblog::before { content: ""; width: 10px; height: 10px; border-radius: 50%;position: absolute; background:white;border: 2px solid white;left: -28px; 
+					-webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; }
+.newblog:hover::before { background:rgb(26,26,26)}
+.newblog::after { content: ""; width: 121px; height: 29px; position: absolute;left: -148px; top: 3px; z-index: 0; background: #CCC ; border-radius:10px;opacity: 0; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; }
+.newblog:hover::after { opacity: 1 }
+.dateview { position: absolute; left: -125px; top: 9px; z-index: 1; color: rgb(26,26,26); }
+.newblog:hover{ background-color:#CCC; color:#000; border-radius:10px;}
+
+
+
+
+
+
+.fgx{ width:80%;height:10px; background-image:url(../images/fgx.png);margin-left:90px; overflow:hidden;}
+
+		/*简介*/
+		.jianjie{float:right;width:35%;text-align:center; color:#999; margin-top:30px;}
+		.jianjie a{color:#FFF;}
+		.jianjie img{ width:40%;border-radius:10%;}
+		.jianjie p{
+		text-align:center;
+			width:250px;
+			font-size:12px;
+	 margin-top:30px;
+	 margin-left:80px;
+	 text-indent:2em;
+	 letter-spacing:0.5em;}
+	 .myessay{ overflow:hidden;padding-top:30px;}
+	 .myessay ul{ margin-top:15px; text-align:left; margin-left:100px;}
+	 
+	 .page { margin: 20px 0; text-align: center; width: 100%; overflow: hidden; }
+.page a b { color: #999; }
+.page>b, .page a { margin: 0 2px; height: 26px; line-height: 26px; border-radius: 50%; width: 26px; text-align: center; display: inline-block }
+.page a { margin: 0 2px; height: 26px; line-height: 26px; border-radius: 50%; width: 26px; text-align: center; display: inline-block }/* 针对IE6 */
+.page>b, .page a:hover { background: #333; color: #FFF; }
+.page a { color: #F33; border: #999 1px solid; }
+
+
+/*小随笔*/
+.myessay ul li {padding:5px;}

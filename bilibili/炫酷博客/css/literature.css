@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+/*图片栏*/
+.zx_slider{position:relative;margin:30px auto 0 auto;width:1000px;height:250px;overflow:hidden;border-radius:5px;font-size:14px;}
+.zx_slider .imgbox{width:3750px;height:310px;position:absolute;left:5px;top:4px;}
+.zx_slider .imgbox img{float:left;width:750px;height:310px;}
+.zx_slider .png{width:1002px;height:250px;left:0px;top:0px;position:absolute;background:url(../images/slider_bg.png);_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/slider_bg.png");}
+.zx_slider .lbtn{cursor:pointer;width:45px;height:55px;position:absolute;left:0px;bottom:-3px;background:url(../images/slider_l_btn.png);_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/slider_l_btn.png");}
+.zx_slider .rbtn{cursor:pointer;width:45px;height:55px;position:absolute;left:718px;bottom:-3px;background:url(../images/slider_r_btn.png);_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/slider_r_btn.png");}
+.zx_slider .btnbox{width:750px;height:60px;position:absolute;left:30px;bottom:0px;}
+.zx_slider .btnbox a{cursor:pointer;display:inline-block;float:left;width:126px;height:54px;margin:0 0 0 10px;}
+.zx_slider .btnbox a img{position:relative;display:inline;width:120px;height:48px;float:left;border:3px solid #392101;border-radius:2px;}
+.zx_slider .btnbox a .img_hover{border:3px solid #e4471f;border-radius:2px;}
+.zx_slider .slider_p{overflow:hidden;width:220px;height:290px;position:absolute;right:15px;top:15px;}
+.zx_slider .slider_p h3{margin:20px 0 10px 0;font-size:20px;text-align:center;color:#faa629;}
+.zx_slider .slider_p p{line-height:26px;font-size:14px;color:#CCC;}
+.hi_btn{width:740px;height:330px;position:absolute;left:0px;top:0px;display:block;}
+/*内容栏*/
+/*读书笔记*/
+.yangli h2 {margin-top:40px;font-family:xingkai;color:#F60;}
+.yangli h3{ font-family:xingkai;}
+.blogs { padding: 30px 0; position: relative; border-bottom: #CCC 1px solid; overflow: hidden;margin-left:40px;}
+		.blogs h3 { font-size: 16px; font-weight: bold; transition: all .5s; margin-bottom: 10px }
+		.blogs h3 a { color:#CCC; text-decoration:none; }
+		.blogs h3 a:hover { color:#FFF;text-decoration:none;}
+		.blogs figure { float: left; width: 25%; overflow: hidden; }
+		.blogs figure img { width: 100%; margin: auto; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s; }
+		.blogs figure:hover img { -moz-transform: scale(1.1); -webkit-transform: scale(1.1); -o-transform: scale(1.1); -ms-transform: scale(1.1); }
+		.blogs ul { float: right; line-height: 22px; width: 72%; color: #756F71;}
+		.blogs ul p span{ padding-left:20px; color:#999;}
+		.blogs ul p a{ text-decoration:none; color:#00F;transition:All 0.4s ease-in-out;
+    -webkit-transition:All 0.4s ease-in-out;
+    -moz-transition:All 0.4s ease-in-out;
+    -o-transition:All 0.4s ease-in-out;}
+		.blogs ul p a:hover{ text-decoration:none; color:#909;}
+.yangli .fgx{ width:80%;height:10px; background-image:url(../images/fgx.png);margin-left:90px; overflow:hidden;}
+/**/
+.rnav {margin: 20px auto; margin-top:60px; overflow: hidden; margin-left:40px; }
+.rnav li { width: 120px; text-align: center; display: inline-block; margin-bottom: 2px; height: 40px; line-height: 40px }
+.rnav li span { color: #FFF; display: block; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s }
+.rnav1 { background: #e41637 }
+.rnav2 { background: #f16b17 }
+.rnav3 { background: #0f9c7c }
+.rnav4 { background: #46ce14 }
+.rnav li span:hover { background: rgba(255,255,255,0.2); -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); }
+
+.yanglituijian .fgx { font-size:18px;width:100%; border:0; color:#F00;}
+.yanglituijian ul { margin-left:60px;}
+.yanglituijian ul li{ margin:15px auto;}
+.yanglituijian ul li a{ color:#999;}
+.yanglituijian ul li span{ margin-right:2%;}
+.yanglituijian ul li .yellow{ background-color:#FC0;padding:5px; border-radius:20%; color:#000;}
+.yanglituijian ul li .black{ background-color:#000;padding:5px; color:#CCC;border-radius:20%;}
+
+.author li img{ width:50px; height:50px; float:left;
+-moz-border-radius: 50px; 
+-webkit-border-radius: 50px; 
+border-radius: 50px; }
+.author li p{ margin-top:10px; color:#CCC; font-size:14px;}
