@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+		<title>Pytorch数据加载</title>
+		<link rel="shortcut icon" href="../../../img/favicon.png"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="distribution" content="global">
+        <meta name="robots" content="follow, all">
+        <meta name="language" content="en">
+        <meta http-equiv="author" content="thinkos.net">
+        <meta http-equiv="contact" content="root@mkrss.com">
+        <meta name="keywords" content="tech, life, mac">
+
+		<link rel="stylesheet" href="../../../Log/stylesheets/normalize.css" type="text/css">
+        <link rel="stylesheet"  href="../../../Log/stylesheets/styles.css" type="text/css">
+				
+      </head>
+<body>
+  <dir class="wrapper">
+  	<header>
+      <h1><a href="#">Pytorch数据加载</a></h1>
+      <p>链接收藏方便自己学习</p>
+      <!--ul class="search" role="search">
+  			<form method="get" action="/index.php">
+			    	<input type="text" placeholder="搜索..." name="s"  onfocus="if (this.value == '搜索...') {this.value = '';}" onblur="if (this.value == '') {this.value = '搜索...';}" />
+  					<input type="submit" id="searchsubmit" value="Go" />
+  			</form>
+  	  </ul-->
+      <nav>
+        <ul>
+        <li><a href="/" title="Home"><span>首页</span></a></li>
+        <li><a href="/"><span>日志</span></a></li>
+        <li><a href="/"><span>生活</span></a></li>
+        <li><a href="/"><span>音乐</span></a></li>
+        <li><a href="/"><span>关于</span></a></li>
+      </ul>
+      <div class="line">&nbsp;</div>
+    </nav>
+    </header>
+  	
+    <div id="content" role="main">
+  		<article>
+</code></pre>
+<p>Pytorch数据加载: data_loader.py</p>
+<p>pytorch 的数据读取方式有两种，一种是不同类别的图像按照文件夹进行划分，比如交通标志数据集：</p>
+<ul>
+<li>train/
+<ul>
+<li>00000/
+<ul>
+<li>01153_00000.png</li>
+<li>01153_00001.png</li>
+</ul>
+</li>
+<li>00001/
+<ul>
+<li>00025_00000.png</li>
+<li>00025_00001.png</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+			 
+			 <pre>
+<code class="python">train_data = torchvision.datasets.ImageFolder(
+       "/data2/dockspace_zcj/traffic-sign/train/",#图片文件存放路径
+	   transform = None #定义的数据增强方式)
+	   
+data_loader = torch.utils.data.DataLoader(train_data, 
+		batch_size=20,
+		shuffle=True)
+""" 
+在模型训练过程时只需要加载data_loader就可以了,
+具体方式在main文件中可见
+"""
+</code>
+</pre>
+			 <h1><p><a href="https://www.jianshu.com/p/84297d9e4882?utm_source=oschina-app" target = "_blank">具体连接</a></p></h1>
+             <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+			 <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+			 <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+			 <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+			 <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+			 <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+             <p></p>
+  		</article>
+  
+  	<aside>
+      <h2><em>分类目录</em></h2>
+        <ul class="categories">
+            <li ><a href="#" title="现在的工作职能系统管理员，所以这里是相关的">个人生活</a></li>
+	          <li ><a href="#" title="运维，系统监控">努力工作</a></li>
+	          <li ><a href="#" title="查看 其它类 下的所有文章">建站技巧</a></li>
+	          <li ><a href="#" title="工作中的一些事件，经验，总结等等，和工作有关">技术相关</a></li>
+              <li ><a href="#" title="查看 小技巧 下的所有文章">小技巧</a></li>
+	          <li ><a href="#" title="wordpress相关的，">建站技巧</a></li>
+	          <li ><a href="#" title="我处在技术一线，所以记录一些可以记录的，值得记录的笔记吧">技术相关</a></li>
+        </ul>
+          <!-- Tags is disabled default. -->
+      <h2><em>链接</em></h2>
+        <ul class="links">
+            <li><a href="https://www.youtube.com/?hl=zh-cn" rel="met" title="一个老外的系统管理博客不不错" target="_blank">Youtube</a></li>
+            <li><a href="http://rs.xidian.edu.cn/portal.php" title="一个不错的CSS学习站." target="_blank">西电睿思</a></li>
+            <li><a href="https://keras-cn.readthedocs.io/en/latest/" title="keras" target="_blank">keras中文文档</a></li>
+            <li><a href="https://tensorflow.google.cn/tutorials/?hl=zh-cn" title="#" target="_blank">Tensorflow</a></li>
+            <li><a href="https://www.icourse163.org/category/computer" title="#">慕课网</a></li>
+            <li><a href="https://arxiv.org/" title="#" target="_blank">Arxiv</a></li>
+            <li><a href="https://github.com/" title="深入了解PHP.很牛ＸＸ的一个人">Github</a></li>
+        </ul>
+
+		<h2><em>日期日历</em></h2>
+		<ul class="months">
+				<li><a href='#' title='2018年十二月'>2018年十二月</a></li>
+	      <li><a href='#' title='2018年十一月'>2018年十一月</a></li>
+	      <li><a href='#' title='2018年十月'>2018年十月</a></li>
+	      <li><a href='#' title='2018年九月'>2018年九月</a></li>
+	      <li><a href='#' title='2018年八月'>2018年八月</a></li>
+		</ul>
+
+		<h2><em>页面</em></h2>
+		<ul class="pages">
+		  <li><a href="/" title="Archives">首页</a></li>
+      	 <li><a href="/" title="Special Topic">日志</a></li>
+         <li><a href="/" title="订阅">生活</a></li>
+         <li><a href="/" title="听听音乐">娱乐</a></li>
+          <li><a href="/" title="首页">关于</a></li>
+		</ul>
+
+    <h2><em>RSS</em></h2>
+    <ul class="feeds">
+	    <li><a href="#">注册</a></li>            
+		<li><a href="#">文章 (RSS)</a></li>
+        <li><a href="#">评论 (RSS)</a></li>
+    </ul> 
+  </aside>
+ </div> 
+ <!-- end content -->
+  <footer id="footer" role="contentinfo">  
+  			<span> Copyright © miclover</span> 
+  </footer><!-- #colophon -->
+  
+</body>
+
+</html>
+
