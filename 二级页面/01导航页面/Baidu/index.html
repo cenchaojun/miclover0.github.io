@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>学习导航 | miclover</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="shortcut icon" href="images/navigation.ico" type="image/x-icon">
+  <link rel="icon" href="images/navigation.ico" type="image/x-icon">
+  <base target="_blank" />
+  <style>
+    *{font-family:Hiragino Sans GB;}body,div,fieldset,form,h1,h2,h3,h4,h5,h6,img,input,li,ol,p,table,td,ul{margin:0;padding:0;border:0;}a{text-decoration:none;}ol,ul{list-style-type:none;}#content,#footer,#input,#method-option,#other-content,#search,#tips,.entrance-content{display:flex;}
+  </style>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    function detectMob() {
+      if (
+        navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/webOS/i) ||
+        navigator.userAgent.match(/iPhone/i) ||
+        navigator.userAgent.match(/iPad/i) ||
+        navigator.userAgent.match(/iPod/i) ||
+        navigator.userAgent.match(/BlackBerry/i) ||
+        navigator.userAgent.match(/Windows Phone/i)
+      ) {
+        return true
+      } else {
+        return false
+      }
+    }
+    var head = document.getElementsByTagName('head')[0]
+    var link = document.createElement("link")
+    link.rel = 'stylesheet'
+    link.type = 'text/css'
+
+    if (detectMob()) {
+      link.href = "./css/mob.css"
+    } else {
+      link.href = "./css/pc.css"
+    }
+    head.appendChild(link)
+	
+	
+	//获取时间函数
+        function time1() {
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth() + 1;
+            var day = today.getDay();
+            var hour = today.getHours();
+            var minute = today.getMinutes();
+            var second = today.getSeconds();
+
+            minute = checkTime(minute);
+            second = checkTime(second);
+
+            document.getElementById("time1").innerHTML =
+                hour + ":" + minute + ":" + second;
+            t = setTimeout("time1()", 500);
+        }
+        //调整时间格式
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+		
+		function time(){
+			var now=new Date();
+			var year=now.getFullYear();
+			var month=now.getMonth()+1;
+			var date=now.getDate();
+			var hour=now.getHours();
+			var minute=now.getMinutes();
+			var day=now.getDay();
+			var strday="";
+			switch(day){
+				case 1:
+				   strday="星期一";break;		
+				case 2:
+				   strday="星期二";break;	
+				 case 3:
+				   strday="星期三";break;	
+				 case 4:
+				   strday="星期四";break;	
+				 case 5:
+				   strday="星期五";break;	
+				 case 6:
+				   strday="星期六";break;	
+				 case 0:
+				   strday="星期天";break;	
+				}
+		  var nowstr=year+"年"+month+"月"+date+"日"+"   "+strday;
+		  var nextstr=now.toLocaleDateString();
+		  document.getElementById("time").innerHTML="   " + nowstr;
+		}
+  
+  </script>
+</head>
+
+<body>
+  <div id="content">
+    <a id="github" href="https://github.com/miclover0/"><i class="fa fa-github fa-1x"></i>&nbsp;<span>GitHub</span></a>
+    <div id="logo"></div>
+	<br/>
+    <div id="input">
+      <form id="search">
+        <input id="search-text" type="text" name="" placeholder="输入想搜索内容" required autocomplete="off">
+        <input id="search-btn" type="submit" value="Search">
+      </form>
+      <div id="method-option">
+        <div id="method">搜索方式:</div>
+        <div id="options">
+          <label class="radio-label"><input type="radio" name="option" value="baidu" checked>百度</label>
+          <label class="radio-label"><input type="radio" name="option" value="google">谷歌</label>
+          <label class="radio-label"><input type="radio" name="option" value="weibo">微博</label>
+          <label class="radio-label"><input type="radio" name="option" value="zhihu">知乎</label>
+          <label class="radio-label"><input type="radio" name="option" value="douban">豆瓣</label>
+          <label class="radio-label"><input type="radio" name="option" value="panci">胖次</label>
+        </div>
+      </div>
+    </div>
+    <div id="tips">
+      <p id="line-one"><div id="time"><script>time()</script></div></p>
+      <p id="line-two"><div id="time1"><script>time1()</script></div></p>
+    </div>
+  </div>
+  
+  <div id="entrance">
+    <div id="school-entrance" class="entrance-content">
+      <div class="entrance-title">西电学习</div>
+      <div id="school-content">
+        <a class="links point" href="http://rs.xidian.edu.cn/portal.php">西电睿思</a>
+        <a class="links" href="http://yz.xidian.edu.cn/">西电研究生招生</a>
+        <a class="links" href="http://www.xidian.edu.cn/">西电官网</a>
+        <a class="links" href="http://xxc.xidian.edu.cn/">西电信息化处</a>
+        <a class="links" href="http://yjsxt.xidian.edu.cn/">西电研究生管理系统</a>
+        <a class="links point" href="http://stumail.xidian.edu.cn/?q=base">西电邮箱</a>
+        <a class="links" href="https://arxiv.org/">Arxiv</a>
+        <a class="links" href="http://202.115.194.60/(S(d1n0yl3q3wvykw2ye5mvqmpf))/default.aspx">教务管理系统</a>
+        <a class="links" href="http://sicnu.benke.chaoxing.com/">尔雅通识课程学习系统</a>
+        <a class="links" href="http://www.zhihuishu.com/"><i class="fa fa-tree fa-fw"></i>&nbsp;智慧树课程学习系统</a>
+        <a class="links" href="http://202.115.194.53:8011/">考试报名系统</a>
+        <a class="links" href="http://202.115.194.62:8080/index.aspx"><i class="fa fa-file-text fa-fw"></i>&nbsp;毕业设计管理系统</a>
+        <a class="links" href="http://jwc.sicnu.edu.cn/InfoService/xksm.htm">学生选课系统</a>
+        <a class="links" href="http://classroom.sicnu.edu.cn/">教室查询及申请</a>
+        <a class="links" href="http://202.115.195.252:8060/">创新学分申请</a>
+        <a class="links" href="http://jwc.sicnu.edu.cn/InfoService/calender1617.html"><i class="fa fa-calendar-check-o fa-fw"></i>&nbsp;师大校历</a>
+        <a class="links" href="http://jwc.sicnu.edu.cn/indexxzzq.aspx"><i class="fa fa-table fa-fw"></i>&nbsp;常用表格下载</a>
+        <a class="links" href="http://tieba.baidu.com/f?kw=%CB%C4%B4%A8%CA%A6%B7%B6%B4%F3%D1%A7&fr=ala0&tpl=5">四川师范大学贴吧</a>
+        <a class="links" href="http://news.sicnu.edu.cn/page.php?id=4"><i class="fa fa-map-marker fa-fw"></i>&nbsp;校园地图</a>
+      </div>
+    </div>
+    <div id="other-entrance" class="entrance-content">
+      <div class="entrance-title">其他导航</div>
+      <div id="other-content">
+        <div class="catalog">
+          <div class="catalog-title">
+            <div id="title-knowledge" class="title-logo"></div>
+            <h2>知识</h2>
+            <div class="unfold"><i class="fa fa-unsorted"></i></div>
+          </div>
+          <div class="catalog-content">
+            <a class="item" href="https://www.google.com.hk/">谷歌</a>
+            <a class="item" href="https://www.zhihu.com/">知乎</a>
+            <a class="item" href="https://segmentfault.com/">SegmentFault</a>
+            <a class="item" href="https://zh.wikipedia.org/">维基百科</a>
+            <a class="item last" href="http://www.guokr.com/">
+              果壳
+              <div class="overlay"></div>
+            </a>
+            <div class="extend focus-bg">
+              <a class="item" href="http://www.wolframalpha.com/">WolframAlpha</a>
+              <a class="item" href="http://zh.wikihow.com/">WikiHow</a>
+              <a class="item" href="http://www.dxy.cn/">丁香园</a>
+              <a class="item" href="https://zhidao.baidu.com/">百度知道</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog">
+          <div class="catalog-title">
+            <div id="title-code" class="title-logo"></div>
+            <h2>编程</h2>
+            <div class="unfold"><i class="fa fa-unsorted"></i></div>
+          </div>
+          <div class="catalog-content">
+            <a class="item" href="https://stackoverflow.com/">Stack Overflow</a>
+            <a class="item" href="https://github.com/">GitHub</a>
+            <a class="item" href="https://www.csdn.net/">CSDN</a>
+            <a class="item" href="https://gold.xitu.io/">掘金</a>
+            <a class="item last" href="http://www.w3school.com.cn/">
+              w3school
+              <div class="overlay"></div>
+            </a>
+            <div class="extend focus-bg">
+              <a class="item" href="http://www.runoob.com/">菜鸟教程</a>
+              <a class="item" href="http://www.imooc.com/">慕课网</a>
+              <a class="item" href="http://www.jikexueyuan.com/">极客学院</a>
+              <a class="item" href="http://www.jb51.net/">脚本之家</a>
+              <a class="item" href="https://www.codewars.com/">codewars</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog">
+          <div class="catalog-title">
+            <div id="title-social" class="title-logo"></div>
+            <h2>社交网络</h2>
+            <div class="unfold"><i class="fa fa-unsorted"></i></div>
+          </div>
+          <div class="catalog-content">
+            <a class="item" href="http://www.weibo.com/">新浪微博</a>
+            <a class="item" href="https://www.douban.com/">豆瓣</a>
+            <a class="item" href="https://twitter.com/">Twitter</a>
+            <a class="item" href="https://www.facebook.com/">Facebook</a>
+            <a class="item last" href="https://wx.qq.com/">
+              微信网页版
+              <div class="overlay"></div>
+            </a>
+            <div class="extend focus-bg">
+              <a class="item" href="https://tieba.baidu.com/">百度贴吧</a>
+              <a class="item" href="http://www.jianshu.com/">简书</a>
+              <a class="item" href="http://www.tianya.cn/">天涯社区</a>
+              <a class="item" href="https://www.linkedin.com/">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog">
+          <div class="catalog-title">
+            <div id="title-shopping" class="title-logo"></div>
+            <h2>购物</h2>
+            <div class="unfold"><i class="fa fa-unsorted"></i></div>
+          </div>
+          <div class="catalog-content">
+            <a class="item" href="https://www.taobao.com/">淘宝</a>
+            <a class="item" href="https://www.jd.com/">京东</a>
+            <a class="item" href="https://www.amazon.cn/">亚马逊</a>
+            <a class="item" href="https://www.tmall.com/">天猫</a>
+            <a class="item last" href="http://www.vip.com/">
+              唯品会
+              <div class="overlay"></div>
+            </a>
+            <div class="extend focus-bg">
+              <a class="item" href="http://bj.jumei.com/">聚美优品</a>
+              <a class="item" href="http://www.mogujie.com/">蘑菇街</a>
+              <a class="item" href="http://www.yhd.com/">1号店</a>
+              <a class="item" href="https://www.suning.com/">苏宁易购</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog">
+          <div class="catalog-title">
+            <div id="title-job" class="title-logo"></div>
+            <h2>求职</h2>
+            <div class="unfold"><i class="fa fa-unsorted"></i></div>
+          </div>
+          <div class="catalog-content">
+            <a class="item" href="https://www.lagou.com/">拉勾网</a>
+            <a class="item" href="http://www.zhaopin.com/">智联招聘</a>
+            <a class="item" href="http://www.shixiseng.com/">实习僧</a>
+            <a class="item" href="https://www.dajie.com/">大街</a>
+            <a class="item last" href="http://www.51job.com/">
+              前程无忧
+              <div class="overlay"></div>
+            </a>
+            <div class="extend focus-bg">
+              <a class="item" href="http://www.ciweishixi.com/">刺猬实习</a>
+              <a class="item" href="http://www.zhipin.com/">BOSS直聘</a>
+              <a class="item" href="http://www.kanzhun.com/">看准网</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog">
+          <div class="catalog-title">
+            <div id="title-video" class="title-logo"></div>
+            <h2>视频</h2>
+            <div class="unfold"><i class="fa fa-unsorted"></i></div>
+          </div>
+          <div class="catalog-content">
+            <a class="item" href="http://www.youku.com/">优酷</a>
+            <a class="item" href="https://www.youtube.com/">YouTube</a>
+            <a class="item" href="http://www.iqiyi.com/">爱奇艺</a>
+            <a class="item" href="https://www.bilibili.com/">bilibili</a>
+            <a class="item last" href="https://v.qq.com/">
+              腾讯视频
+              <div class="overlay"></div>
+            </a>
+            <div class="extend focus-bg">
+              <a class="item" href="http://tv.sohu.com/">搜狐视频</a>
+              <a class="item" href="http://www.le.com/">乐视</a>
+              <a class="item" href="http://www.acfun.cn/">AcFun</a>
+              <a class="item" href="http://www.pptv.com/">PPTV</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog">
+          <div class="catalog-title">
+            <div id="title-picture" class="title-logo"></div>
+            <h2>图片</h2>
+            <div class="unfold"><i class="fa fa-unsorted"></i></div>
+          </div>
+          <div class="catalog-content">
+            <a class="item" href="https://500px.com/">500px</a>
+            <a class="item" href="https://www.instagram.com/">Instagram</a>
+            <a class="item" href="http://www.nipic.com/">昵图网</a>
+            <a class="item" href="http://www.topit.me/">优美图</a>
+            <a class="item last" href="https://www.flickr.com/">
+              Flickr
+              <div class="overlay"></div>
+            </a>
+            <div class="extend focus-bg">
+              <a class="item" href="https://www.pinterest.com/">Pinterest</a>
+              <a class="item" href="https://photos.google.com/">GooglePhotos</a>
+              <a class="item" href="http://huaban.com/">花瓣网</a>
+              <a class="item" href="http://www.lanrentuku.com/">懒人图库</a>
+              <a class="item" href="http://skidanov.com/portfolio/">Skidanov</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog">
+          <div class="catalog-title">
+            <div id="title-film" class="title-logo"></div>
+            <h2>电影</h2>
+            <div class="unfold"><i class="fa fa-unsorted"></i></div>
+          </div>
+          <div class="catalog-content">
+            <a class="item" href="https://movie.douban.com/">豆瓣电影</a>
+            <a class="item" href="http://www.imdb.com/">IMDb</a>
+            <a class="item" href="http://www.mtime.com/">时光网</a>
+            <a class="item" href="https://www.rottentomatoes.com/">烂番茄</a>
+            <a class="item last" href="http://pan.baidu.com/">
+              百度云
+              <div class="overlay"></div>
+            </a>
+            <div class="extend focus-bg">
+              <a class="item" href="http://dianying.fm/discovery/tron-legacy/">电影FM</a>
+              <a class="item" href="https://torrents.me/">Torrents</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog">
+          <div class="catalog-title">
+            <div id="title-music" class="title-logo"></div>
+            <h2>音乐</h2>
+            <div class="unfold"><i class="fa fa-unsorted"></i></div>
+          </div>
+          <div class="catalog-content">
+            <a class="item" href="http://music.163.com/">网易云音乐</a>
+            <a class="item" href="http://www.xiami.com/">虾米音乐</a>
+            <a class="item" href="https://www.apple.com/cn/itunes/">iTunes</a>
+            <a class="item" href="https://y.qq.com/">QQ音乐</a>
+            <a class="item last" href="https://music.douban.com/">
+              豆瓣音乐
+              <div class="overlay"></div>
+            </a>
+            <div class="extend focus-bg">
+              <a class="item" href="https://soundcloud.com/">SoundCloud</a>
+              <a class="item" href="https://bandcamp.com/">bandcamp</a>
+              <a class="item" href="http://www.pandora.com/">Pandora</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog">
+          <div class="catalog-title">
+            <div id="title-travel" class="title-logo"></div>
+            <h2>出行</h2>
+            <div class="unfold"><i class="fa fa-unsorted"></i></div>
+          </div>
+          <div class="catalog-content">
+            <a class="item" href="http://www.ctrip.com/">携程</a>
+            <a class="item" href="https://www.qunar.com/">去哪儿</a>
+            <a class="item" href="http://www.dianping.com/">大众点评</a>
+            <a class="item" href="https://www.airbnbchina.cn/">Airbnb</a>
+            <a class="item last" href="http://map.baidu.com/">
+              百度地图
+              <div class="overlay"></div>
+            </a>
+            <div class="extend focus-bg">
+              <a class="item" href="http://web.breadtrip.com/">面包旅行</a>
+              <a class="item" href="http://chanyouji.com/">蝉游记</a>
+              <a class="item" href="http://www.google.cn/maps">谷歌地图</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <p id="disc">希望每天的自己都是焕然一新&nbsp;天天开心，好彩自然来&nbsp;&gt;&#183;&lt;</p>
+    <p id="copyright">&copy; miclover&nbsp;1.2.1&nbsp;</p>
+    <p id="date">Since 2019-01-01</p>
+  </div>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

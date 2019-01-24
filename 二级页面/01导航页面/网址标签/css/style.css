@@ -1,0 +1,59 @@
+/*-----global------*/
+body,html{
+  margin:0px;
+  padding:0px;
+  font-family: 'Microsoft Yahei';
+  font-size: 14px;
+}
+a,a:hover{text-decoration:none;}
+.top-banner{
+  height:100px;
+  line-height: 100px;
+  background:#61B3E6;
+}
+ul{
+  padding:0px;
+  margin:0px;
+  list-style: none;
+}
+ul li{
+  margin:0px;
+}
+.top-banner .container{
+  height:100px;
+}
+.navbar-default{
+  height:100px;
+  background: none;
+  border:0px;
+}
+.container-fluid,.navbar-header{
+  height:100px;
+  line-height: 100px;
+}
+.navbar-brand{
+  height:100px;
+  line-height: 65px;
+  font-size: 30px;
+}
+.panel-default{
+  border:0px;
+}
+.inline{
+  padding-left: 10px;
+}
+.btn-primary{
+  background-color:#61B3E6;
+  border-color:#61B3E6;
+  color:#fff;
+}
+.inline li{
+  display: inline-block;
+  margin:5px 5px;
+}
+.btn-info1,.btn-info1:hover{
+  width:100px;
+  background-color:#01814A;
+  border-color:#cff;
+  color:#cff;
+}
