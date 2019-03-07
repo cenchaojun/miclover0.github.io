@@ -135,9 +135,9 @@
                     <li class="menu-li">
                         <a target="_blank">博客导航</a>
                         <ul class="i-num">
-                            <li><a href="二级页面/01导航页面/网址标签/navigation.html" target="_blank">首选标签</a></li>
+                            <li><a href="二级页面/01导航页面/常用网址/navigation.html" target="_blank">常用网址</a></li>
 							<li><a href="二级页面/01导航页面/Baidu/index.html" target="_blank">浏览搜索</a></li>
-							<li><a href="二级页面/01导航页面/导航页面2/index.html" target="_blank">预留导航</a></li>							
+							<li><a href="二级页面/01导航页面/前端导航/index.html" target="_blank">前端导航</a></li>							
 							
                         </ul>
                     </li>
@@ -182,7 +182,8 @@
                     <li class="menu-li">
                         <a href="#" target="_blank">高频链接</a>
                         <ul class="i-num">
-							<li><a href="https://www.baidu.com/" target="_blank">Baidu</a></li>
+							<li><a href="https://translate.google.cn/" target="_blank">谷歌翻译</a></li>
+							<li><a href="https://www.baidu.com/" target="_blank">百度一下</a></li>
                             <li><a href="https://github.com/" target="_blank">Github</a></li>
 							<li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>	
                         </ul>
@@ -364,8 +365,18 @@
 			<li><a href="二级页面/03视频展示页（测试）/视频展示1/home.html" target="_blank">视频展示</a></li>
 			<li><a href="https://www.videofk.com/" target="_blank" ><font color="green">视频下载</font></a></li>
 			<li><a href="二级页面/02休闲生活/动漫导航/index.html" target="_blank">动漫导航</a></li>
-			<li><a href="二级页面\01导航页面\柠檬导航/index.html" target="_blank">柠檬导航</a></li>
+			
 			<li><a href="#">返回顶部</a></li>
+			
+		</ul>
+	</div>
+	
+	<div id="lfloat">
+		<ul>
+			<li align="center"><a><font color="green">任务</font></a></li>
+			<li><a>1）<span id="show2">Loading...</span></a></li>
+			<li><a>2）本周论文改完</a></li>	
+			<li><a>3）做项目人脸识别</a></li>	
 			
 		</ul>
 	</div>
@@ -410,7 +421,7 @@
 
 		
 			<script type="text/javascript">
-			function count_down(o){
+			function count_down1(o){
 					var www_qsyz_net=/^[\d]{4}-[\d]{1,2}-[\d]{1,2}( [\d]{1,2}:[\d]{1,2}(:[\d]{1,2})?)?$/ig,str='',conn,s;
 					// 检验时间格式
 					if(!o.match(www_qsyz_net)){
@@ -432,9 +443,9 @@
 					if(Math.floor(sec)==0){ str='0秒'; }
 					document.getElementById('show1').innerHTML = '' + conn  + str ;
 					document.getElementById('show2').innerHTML = '' + conn  + str ;
-					setTimeout(function(){count_down(o)},1000);
+					setTimeout(function(){count_down1(o)},1000);
 			}
-			count_down('2019-03-20 00:00:00');
+			count_down1('2019-03-17 00:00:00');
 			</script>  
 			
 			
