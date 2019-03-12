@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>导航主页</title>
+    <title>工作台|小鸣</title>
     <link rel="stylesheet" href="dist/css/index.min.css">
 	<link rel="shortcut icon" href="img/favicon.png"/>
 	
@@ -87,7 +87,7 @@
     <div class="nav">
 	
         <div class="contain clear">
-            <div class="nav-left">个人简历</div>
+            <div class="nav-left"><strong><a href="#"><span style="color:#008000;">工作台</span></a></strong></div>
 			
             <div class="nav-right">
                 <ul class="nav-right-ul clear">
@@ -108,6 +108,8 @@
 								<strong><a href="https://www.datafountain.cn/projects/2019dcic/" target="_blank"><span style="color:#008000;">详情点击</span></a></strong>
 								<span style="color:#008000;">&nbsp;&nbsp;&nbsp;&nbsp;消息二：抓紧写论文，</span><span id="show1">Loading...</span>
 								<strong><a href="#"><span style="color:#008000;">详情点击</span></a></strong>
+								<span style="color:#008000;">&nbsp;&nbsp;&nbsp;&nbsp;消息三：正在完善标签页,可预览</span>
+								<strong><a href="二级页面/标签页.html"><span style="color:#008000;">详情点击</span></a></strong>
 							</marquee>	
 						</div>
 					</h3>
@@ -194,7 +196,7 @@
                     </li>
                 </ul>
                 <div class="menu-r">
-					
+					<img src="http://i0.hdslb.com/bfs/archive/b6b95cc055f6034ec7ed2d74bb07ba1295f9e23a.gif">
 					<!--img height="45" width="60" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547749325996&di=ccae93ccdc20fe73a929feff0f1fd5de&imgtype=0&src=http%3A%2F%2Fwww.qqtu8.com%2Ff%2F20131223184719.gif"/>
                     <img src="http://i0.hdslb.com/icon/9068618cb70cdc16b696814323a33033.gif"-->  
 					
@@ -404,7 +406,7 @@
 					if(sec > 0){
 							conn='还有';
 					}else{
-							conn='论文修改已过去';
+							conn='回稿已过去';
 							sec*=-1;
 					}
 					s={'天':sec/24/3600,'小时':sec/3600%24,'分':sec/60%60,'秒':sec%60};
@@ -415,7 +417,7 @@
 					document.getElementById('show').innerHTML = '' + o +'&nbsp&nbsp'+ conn  + str ;
 					setTimeout(function(){count_down(o)},1000);
 			}
-			count_down('2019-02-20 12:00:00');
+			count_down('2019-03-13 16:30:00');
 			</script>  
 		<P><center>欢迎大家访问</center></p>
 
