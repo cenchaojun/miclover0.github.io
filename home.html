@@ -106,7 +106,7 @@
 							<marquee scrollamount="5" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
 								<span style="color:#008000;">消息一：2019年数字中国创新大赛</span>
 								<strong><a href="https://www.datafountain.cn/projects/2019dcic/" target="_blank"><span style="color:#008000;">详情点击</span></a></strong>
-								<span style="color:#008000;">&nbsp;&nbsp;&nbsp;&nbsp;消息二：抓紧写论文，</span><span id="show1">Loading...</span>
+								<span style="color:#008000;">&nbsp;&nbsp;&nbsp;&nbsp;消息二：抓紧备战博士入学考试，</span><span id="show1">Loading...</span>
 								<strong><a href="#"><span style="color:#008000;">详情点击</span></a></strong>
 								<span style="color:#008000;">&nbsp;&nbsp;&nbsp;&nbsp;消息三：正在完善标签页,可预览</span>
 								<strong><a href="二级页面/标签页.html"><span style="color:#008000;">详情点击</span></a></strong>
@@ -434,7 +434,7 @@
 					// 结束
 					var sec=(new Date(o.replace(/-/ig,'/')).getTime() - new Date().getTime())/1000;
 					if(sec > 0){
-							conn='完成毕设还有';
+							conn='考博倒计时:';
 					}else{
 							conn='论文修改已过去';
 							sec*=-1;
@@ -448,7 +448,7 @@
 					document.getElementById('show2').innerHTML = '' + conn  + str ;
 					setTimeout(function(){count_down1(o)},1000);
 			}
-			count_down1('2019-03-17 23:59:59');
+			count_down1('2019-04-19 23:59:59');
 			</script>  
 			
 			
