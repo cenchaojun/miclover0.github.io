@@ -2,18 +2,18 @@
 <html>
 
 <head>
-  <title>学习导航 | miclover</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="shortcut icon" href="images/navigation.ico" type="image/x-icon">
-  <link rel="icon" href="images/navigation.ico" type="image/x-icon">
-  <base target="_blank" />
-  <style>
-    *{font-family:Hiragino Sans GB;}body,div,fieldset,form,h1,h2,h3,h4,h5,h6,img,input,li,ol,p,table,td,ul{margin:0;padding:0;border:0;}a{text-decoration:none;}ol,ul{list-style-type:none;}#content,#footer,#input,#method-option,#other-content,#search,#tips,.entrance-content{display:flex;}
-  </style>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script>
+	<title>学习导航 | miclover</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="images/navigation.ico" type="image/x-icon">
+	<link rel="icon" href="images/navigation.ico" type="image/x-icon">
+	<base target="_blank" />
+	<style>
+		*{font-family:Hiragino Sans GB;}body,div,fieldset,form,h1,h2,h3,h4,h5,h6,img,input,li,ol,p,table,td,ul{margin:0;padding:0;border:0;}a{text-decoration:none;}ol,ul{list-style-type:none;}#content,#footer,#input,#method-option,#other-content,#search,#tips,.entrance-content{display:flex;}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
     function detectMob() {
       if (
         navigator.userAgent.match(/Android/i) ||
@@ -97,87 +97,78 @@
 		  document.getElementById("time").innerHTML="   " + nowstr;
 		}
   
-  </script>
+	</script>
 </head>
 
 <body>
-  <div id="content">
+													<!--第一部分-->
+													
+	<div id="content">
     <a id="github" href="https://github.com/miclover0/"><i class="fa fa-github fa-1x"></i>&nbsp;<span>GitHub</span></a>
     <div id="logo"></div>
 	<br/>
     <div id="input">
-      <form id="search">
-        <input id="search-text" type="text" name="" placeholder="输入想搜索内容" required autocomplete="off">
-        <input id="search-btn" type="submit" value="Search">
-      </form>
-      <div id="method-option">
-        <div id="method">搜索方式:</div>
-        <div id="options">
-          <label class="radio-label"><input type="radio" name="option" value="baidu" checked>百度</label>
-          <label class="radio-label"><input type="radio" name="option" value="google">谷歌</label>
-          <label class="radio-label"><input type="radio" name="option" value="weibo">微博</label>
-          <label class="radio-label"><input type="radio" name="option" value="zhihu">知乎</label>
-          <label class="radio-label"><input type="radio" name="option" value="douban">豆瓣</label>
-          <label class="radio-label"><input type="radio" name="option" value="panci">胖次</label>
-        </div>
-      </div>
+		<form id="search">
+			<input id="search-text" type="text" name="" placeholder="输入想搜索内容" required autocomplete="off">
+			<input id="search-btn" type="submit" value="Search">
+		</form>
+		<div id="method-option">
+			<div id="method">搜索方式:</div>
+			<div id="options">
+				<label class="radio-label"><input type="radio" name="option" value="baidu" checked>百度</label>
+				<label class="radio-label"><input type="radio" name="option" value="google">谷歌</label>
+				<label class="radio-label"><input type="radio" name="option" value="weibo">微博</label>
+				<label class="radio-label"><input type="radio" name="option" value="zhihu">知乎</label>
+				<label class="radio-label"><input type="radio" name="option" value="douban">豆瓣</label>
+				<label class="radio-label"><input type="radio" name="option" value="panci">胖次</label>
+			</div>
+		</div>
     </div>
-    <div id="tips">
-      <p id="line-one"><div id="time"><script>time()</script></div></p>
-      <p id="line-two"><div id="time1"><script>time1()</script></div></p>
-    </div>
-  </div>
-  
-  <div id="entrance">
+		<div id="tips">
+			<p id="line-one"><div id="time"><script>time()</script></div></p>
+			<p id="line-two"><div id="time1"><script>time1()</script></div></p>
+		</div>
+	</div>
+	
+													<!--第二部分-->  
+													
+	<div id="entrance">
     <div id="school-entrance" class="entrance-content">
-      <div class="entrance-title">西电学习</div>
-      <div id="school-content">
-        <a class="links point" href="http://rs.xidian.edu.cn/portal.php">西电睿思</a>
-        <a class="links" href="http://yz.xidian.edu.cn/">西电研究生招生</a>
-        <a class="links" href="http://www.xidian.edu.cn/">西电官网</a>
-        <a class="links" href="http://xxc.xidian.edu.cn/">西电信息化处</a>
-        <a class="links" href="http://yjsxt.xidian.edu.cn/">西电研究生管理系统</a>
-        <a class="links point" href="http://stumail.xidian.edu.cn/?q=base">西电邮箱</a>
-        <a class="links" href="https://arxiv.org/">Arxiv</a>
-        <a class="links" href="http://202.115.194.60/(S(d1n0yl3q3wvykw2ye5mvqmpf))/default.aspx">教务管理系统</a>
-        <a class="links" href="http://sicnu.benke.chaoxing.com/">尔雅通识课程学习系统</a>
-        <a class="links" href="http://www.zhihuishu.com/"><i class="fa fa-tree fa-fw"></i>&nbsp;智慧树课程学习系统</a>
-        <a class="links" href="http://202.115.194.53:8011/">考试报名系统</a>
-        <a class="links" href="http://202.115.194.62:8080/index.aspx"><i class="fa fa-file-text fa-fw"></i>&nbsp;毕业设计管理系统</a>
-        <a class="links" href="http://jwc.sicnu.edu.cn/InfoService/xksm.htm">学生选课系统</a>
-        <a class="links" href="http://classroom.sicnu.edu.cn/">教室查询及申请</a>
-        <a class="links" href="http://202.115.195.252:8060/">创新学分申请</a>
-        <a class="links" href="http://jwc.sicnu.edu.cn/InfoService/calender1617.html"><i class="fa fa-calendar-check-o fa-fw"></i>&nbsp;师大校历</a>
-        <a class="links" href="http://jwc.sicnu.edu.cn/indexxzzq.aspx"><i class="fa fa-table fa-fw"></i>&nbsp;常用表格下载</a>
-        <a class="links" href="http://tieba.baidu.com/f?kw=%CB%C4%B4%A8%CA%A6%B7%B6%B4%F3%D1%A7&fr=ala0&tpl=5">四川师范大学贴吧</a>
-        <a class="links" href="http://news.sicnu.edu.cn/page.php?id=4"><i class="fa fa-map-marker fa-fw"></i>&nbsp;校园地图</a>
-      </div>
+		<div class="entrance-title">工作学习</div>
+		<div id="school-content">
+			<a class="links point" href="https://ilearningx.huawei.com/portal/#/">华为大学</a>
+			<a class="links" href="http://hr-welcometo.huawei.com/wcaportal/faces/home?_adf.ctrl-state=ixodpojed_4">华为报道</a>
+			<a class="links" href="https://itravel.hwht.com/login">慧通差旅</a>
+		</div>
     </div>
+	
+													<!--第三部分-->	
+													
     <div id="other-entrance" class="entrance-content">
-      <div class="entrance-title">其他导航</div>
-      <div id="other-content">
+		<div class="entrance-title">其他导航</div>
+		<div id="other-content">
         <div class="catalog">
-          <div class="catalog-title">
+			<div class="catalog-title">
             <div id="title-knowledge" class="title-logo"></div>
             <h2>知识</h2>
             <div class="unfold"><i class="fa fa-unsorted"></i></div>
-          </div>
-          <div class="catalog-content">
-            <a class="item" href="https://www.google.com.hk/">谷歌</a>
-            <a class="item" href="https://www.zhihu.com/">知乎</a>
-            <a class="item" href="https://segmentfault.com/">SegmentFault</a>
-            <a class="item" href="https://zh.wikipedia.org/">维基百科</a>
-            <a class="item last" href="http://www.guokr.com/">
-              果壳
-              <div class="overlay"></div>
-            </a>
+			</div>
+			<div class="catalog-content">
+				<a class="item" href="https://www.google.com.hk/">谷歌</a>
+				<a class="item" href="https://www.zhihu.com/">知乎</a>
+				<a class="item" href="https://segmentfault.com/">SegmentFault</a>
+				<a class="item" href="https://zh.wikipedia.org/">维基百科</a>
+				<a class="item last" href="http://www.guokr.com/">
+				  果壳
+				<div class="overlay"></div>
+				</a>
             <div class="extend focus-bg">
-              <a class="item" href="http://www.wolframalpha.com/">WolframAlpha</a>
-              <a class="item" href="http://zh.wikihow.com/">WikiHow</a>
-              <a class="item" href="http://www.dxy.cn/">丁香园</a>
-              <a class="item" href="https://zhidao.baidu.com/">百度知道</a>
+				<a class="item" href="http://www.wolframalpha.com/">WolframAlpha</a>
+				<a class="item" href="http://zh.wikihow.com/">WikiHow</a>
+				<a class="item" href="http://www.dxy.cn/">丁香园</a>
+				<a class="item" href="https://zhidao.baidu.com/">百度知道</a>
             </div>
-          </div>
+			</div>
         </div>
 
         <div class="catalog">
