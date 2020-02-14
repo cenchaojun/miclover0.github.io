@@ -70,7 +70,7 @@ def read_and_write(file_name_title,file_name_title_more,key_word,line_set):
         f1.write(j)
     f1.close()
     
-if __name__ == "__main__":
+def main():
     url1 = "            <li><a href=\""
     url3 = "\" target='_black'><span>"
     url4 = time.strftime('%Y-%m-%d',time.localtime(time.time()))
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     url7 = "</a></li>\n"
     sym = "\\"
     
-    key_words = ["<ul id = \"1\">","<ul id = \"2\">",
+    key_words = ["<ul id = \"0\">","<ul id = \"1\">","<ul id = \"2\">",
                 "<ul id = \"3\">","<ul id = \"4\">",
                 "<ul id = \"5\">","<ul id = \"6\">",
                 "<ul id = \"7\">","<ul id = \"8\">",
@@ -94,30 +94,68 @@ if __name__ == "__main__":
     
     file_name_title = title[int(file_name_no)]
     line_set = url1 + url2 + url3 + url4 + url5 + url6 + url7
-    if file_name_no == 0:
-        print("暂不支持！")
-    elif file_name_no == "1":
-        file_name_title_more = "./更多/C++/more_cpp.html"
-        print("个人手札 = 0 面试总结 = 1 收藏网址 = 3")
+    if file_name_no == "0":
+        file_name_title_more = "./更多/python/more_python.html"
+        print("个人手札 = 0 \n有用网址 = 1 \n待分类 = 2 \n网络爬虫 = 3 \n扩展包 = 4 \n待分类 = 5\n")
         key_word_no= input("请输入title(例如0)：")
         key_word = key_words[int(key_word_no)]
         read_and_write(file_name_title,file_name_title_more,key_word,line_set)
-    elif file_name_no == 2:
-        print("暂不支持！")
-    elif file_name_no == 3:
-        print("暂不支持！")
-    elif file_name_no == 4:
-        print("暂不支持！")
-    elif file_name_no == 5:
-        print("暂不支持！")
-    elif file_name_no == 6:
-        print("暂不支持！")
-    elif file_name_no == 7:
-        print("暂不支持！")
+    elif file_name_no == "1":
+        file_name_title_more = "./更多/C++/more_cpp.html"
+        print("个人手札 = 0 面试总结 = 1 收藏网址 = 2")
+        key_word_no= input("请输入title(例如0)：")
+        key_word = key_words[int(key_word_no)]
+        read_and_write(file_name_title,file_name_title_more,key_word,line_set)
+    elif file_name_no == "2":
+        file_name_title_more = "./更多/Java/more_Java.html"
+        print("个人手札 = 0 \n面试总结 = 1 \n收藏网址 = 2\n")
+        key_word_no= input("请输入title(例如0)：")
+        key_word = key_words[int(key_word_no)]
+        read_and_write(file_name_title,file_name_title_more,key_word,line_set)
+    elif file_name_no == "3":
+        file_name_title_more = "./更多/机器学习/more_机器学习.html"
+        print("系统总结 = 0 \n代码收藏 = 1 \n基础概念 = 2")
+        print("深度学习 = 3 \nmatlab = 4 \n个人手札 = 5\n")
+        key_word_no= input("请输入title(例如0)：")
+        key_word = key_words[int(key_word_no)]
+        read_and_write(file_name_title,file_name_title_more,key_word,line_set)
+    elif file_name_no == "4":
+        file_name_title_more = "./更多/深度框架/more_深度框架.html"
+        print("基础知识 = 0 \nTensorflow = 1 \n安装技巧 = 2")
+        print("代码收藏 = 3 \nKeras = 4 \n代码收藏 = 5")
+        print("Pytorch = 6 \n比赛心得 = 7 \n收藏网址 = 8")
+        print("Caffe = 9 \n比赛心得 = 10 \n收藏网址 = 11\n")
+        key_word_no= input("请输入title(例如0)：")
+        key_word = key_words[int(key_word_no)]
+        read_and_write(file_name_title,file_name_title_more,key_word,line_set)
+    elif file_name_no == "5":
+        file_name_title_more = "./更多/Linux/more_Linux.html"
+        print("个人手札 = 0 \n比赛心得 = 1 \n收藏网址 = 2")
+        print("收藏网址 = 3 \n收藏网址 = 4 \n收藏网址 = 5\n")
+        key_word_no= input("请输入title(例如0)：")
+        key_word = key_words[int(key_word_no)]
+        read_and_write(file_name_title,file_name_title_more,key_word,line_set)
+    elif file_name_no == "6":
+        file_name_title_more = "./更多/学习总结/more_学习总结.html"
+        print("暂时固定不再改变！！！！！！")
+#        key_word_no= input("请输入title(例如0)：")
+#        key_word = key_words[int(key_word_no)]
+#        read_and_write(file_name_title,file_name_title_more,key_word,line_set)
+    elif file_name_no == "7":
+        file_name_title_more = "./更多/TechCol/more_TechCol.html"
+        print("个人手札 = 0 \n面试总结 = 1 \n收藏网址 = 2")
+        print("Github资料 = 3 \nSQL基础知识 = 4 \n收藏网址 = 5\n")
+        key_word_no= input("请输入title(例如0)：")
+        key_word = key_words[int(key_word_no)]
+        read_and_write(file_name_title,file_name_title_more,key_word,line_set)
 
-
-
-
+if __name__ == "__main__":
+    active = True 
+    while active:
+        main()
+        message = input("确认推出吗？(quit):")
+        if message =="quit" or message =="q":
+            active = False
 
 
 
