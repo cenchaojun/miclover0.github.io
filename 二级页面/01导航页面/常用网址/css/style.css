@@ -57,3 +57,9 @@ ul li{
   border-color:#cff;
   color:#cff;
 }
+.btn-info2,.btn-info2:hover{
+  width:130px;
+  background-color:#DC143C;
+  border-color:#cff;
+  color:#cff;
+}
