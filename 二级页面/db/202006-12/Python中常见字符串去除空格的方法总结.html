@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>offline blog</title>
+<link href="../Template/css/styles.css" rel="stylesheet">
+<link rel="shortcut icon" href="../Template/images/top.jpg"/>
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+
+
+
+<div class="mainContent2">
+    <aside>
+		<div class="avatar">
+			<a href="../../../home.html"><span>牛奶小生</span></a>
+		</div>
+		
+		<section class="topspaceinfo">
+			<h1>摘要</h1>
+			<p></p>
+		</section>
+		
+		<div class="userinfo"></div>
+	  
+	  
+	  
+	
+    </aside>
+	
+	
+    <div class="blogitem">
+		<article>
+			<h2 class="title"><a>Python中常见字符串去除空格的方法总结</a></h2>
+			<ul class="text">
+				<b><p>1：strip()方法，去除字符串开头或者结尾的空格</p></b>
+				<p>&nbsp;&nbsp;>>> a = " a b c "</p>
+				<p>&nbsp;&nbsp;>>> a.strip()</p>
+				<p>&nbsp;&nbsp;'a b c'</p>
+				<b><p>2：lstrip()方法，去除字符串开头的空格</p></b>
+				<p>&nbsp;&nbsp;>>> a = " a b c "</p>
+				<p>&nbsp;&nbsp;>>> a.lstrip()</p>
+				<p>&nbsp;&nbsp;'a b c '</p>
+				<b><p>3：rstrip()方法，去除字符串结尾的空格</p></b>
+				<p>&nbsp;&nbsp;>>> a = " a b c "</p>
+				<p>&nbsp;&nbsp;>>> a.rstrip()</p>
+				<p>&nbsp;&nbsp;' a b c'</p>
+				<b><p>4：replace()方法，可以去除全部空格</p></b>
+				<p>&nbsp;&nbsp;replace主要用于字符串的替换replace(old, new, count)</p>
+				<p>&nbsp;&nbsp;>>> a = " a b c "</p>
+				<p>&nbsp;&nbsp;>>> a.replace(" ", "")</p>
+				<p>&nbsp;&nbsp;'abc'</p>
+				<b><p>5: join()方法+split()方法，可以去除全部空格</p></b>
+				<p>&nbsp;&nbsp;join为字符字符串合成传入一个字符串列表，split用于字符串分割可以按规则进行分割</p>
+				<p>&nbsp;&nbsp;>>> a = " a b c "</p>
+				<p>&nbsp;&nbsp;>>> b = a.split()  # 字符串按空格分割成列表</p>
+				<p>&nbsp;&nbsp;>>> b ['a', 'b', 'c']</p>
+				<p>&nbsp;&nbsp;>>> c = "".join(b) # 使用一个空字符串合成列表内容生成新的字符串</p>
+				<p>&nbsp;&nbsp;>>> c 'abc'</p>
+				<p>&nbsp;&nbsp;快捷用法</p>
+				<p>&nbsp;&nbsp;>>> a = " a b c "</p>
+				<p>&nbsp;&nbsp;>>> "".join(a.split())</p>
+				<p>&nbsp;&nbsp;'abc'</p>
+			</ul>
+			
+			<div class="textfoot">
+				<p>博客写于：2020-06-10</p>
+			</div>
+		</article> 
+        
+	</div>
+</div>
+ 
+ 
+<footer>
+	<div class="Copyright">
+		<ul><a href="#">牛奶小生</a><a href="#">似水流年</a><a href="#">执笔流年</a><a href="#">为你书写</a></ul>
+		<p>Article by Miclover</p>
+		<br/>
+	</div>
+</footer>
+</body>
+</html>

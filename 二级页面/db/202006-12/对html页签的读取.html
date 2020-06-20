@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>offline blog</title>
+<link href="../Template/css/styles.css" rel="stylesheet">
+<link rel="shortcut icon" href="../Template/images/top.jpg"/>
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+
+
+
+<div class="mainContent2">
+    <aside>
+		<div class="avatar">
+			<a href="../../../home.html"><span>牛奶小生</span></a>
+		</div>
+		
+		<section class="topspaceinfo">
+			<h1>摘要</h1>
+			<p></p>
+		</section>
+		
+		<div class="userinfo"></div>
+	  
+	  
+	  
+	
+    </aside>
+	
+	
+    <div class="blogitem">
+		<article>
+			<h2 class="title"><a>对html页签的读取</a></h2>
+			<ul class="text">
+				<p>&nbsp;&nbsp;from bs4 import BeautifulSoup</p>
+				<p>&nbsp;&nbsp;f = open("C:/Users/JIA/Desktop/数据结构/file.txt", "r")</p>
+				<p>&nbsp;&nbsp;lines = f.readlines()  # 读取全部内容</p>
+				<p>&nbsp;&nbsp;for line in lines:</p>
+				<p>&nbsp;&nbsp;    html = line</p>
+				<p>&nbsp;&nbsp;    # 用BeautifulSoup解析数据  python3 必须传入参数二'html.parser' 得到一个对象，接下来获取对象的相关属性</p>
+				<p>&nbsp;&nbsp;    html = BeautifulSoup(html, 'html.parser')</p>
+				<p>&nbsp;&nbsp;    attrs = html.a.attrs</p>
+				<p>&nbsp;&nbsp;    if attrs['data-type'] == "ppt":</p>
+				<p>&nbsp;&nbsp;        print(attrs['data-title'] + attrs['data-type'], attrs['data-url'])</p>
+				<p>&nbsp;&nbsp;    else:</p>
+				<p>&nbsp;&nbsp;        print(attrs['data-title'], attrs['data-url'])</p>
+			</ul>
+			
+			<div class="textfoot">
+				<p>博客写于：2020-06-12</p>
+			</div>
+		</article> 
+        
+	</div>
+</div>
+ 
+ 
+<footer>
+	<div class="Copyright">
+		<ul><a href="#">牛奶小生</a><a href="#">似水流年</a><a href="#">执笔流年</a><a href="#">为你书写</a></ul>
+		<p>Article by Miclover</p>
+		<br/>
+	</div>
+</footer>
+</body>
+</html>

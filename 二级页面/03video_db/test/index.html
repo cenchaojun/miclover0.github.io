@@ -1,0 +1,260 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="zh-CN en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tensorflow</title>
+	<link href="./stylesheets/page-style.css" type="text/css" rel="stylesheet">
+	<link href="./stylesheets/syntax.css" type="text/css" rel="stylesheet">
+	<link rel="icon" href="./static/img/description/tab_icon.png">
+
+	<script type="text/javascript" src="./js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/video-select.js"></script>
+
+	<script type="text/javascript">
+	/* check-flash.js */
+	var FlashDetect=new function(){var self=this;self.installed=false;self.raw="";self.major=-1;self.minor=-1;self.revision=-1;self.revisionStr="";var activeXDetectRules=[{"name":"ShockwaveFlash.ShockwaveFlash.7","version":function(obj){return getActiveXVersion(obj);}},{"name":"ShockwaveFlash.ShockwaveFlash.6","version":function(obj){var version="6,0,21";try{obj.AllowScriptAccess="always";version=getActiveXVersion(obj);}catch(err){}
+	return version;}},{"name":"ShockwaveFlash.ShockwaveFlash","version":function(obj){return getActiveXVersion(obj);}}];var getActiveXVersion=function(activeXObj){var version=-1;try{version=activeXObj.GetVariable("$version");}catch(err){}
+	return version;};var getActiveXObject=function(name){var obj=-1;try{obj=new ActiveXObject(name);}catch(err){obj={activeXError:true};}
+	return obj;};var parseActiveXVersion=function(str){var versionArray=str.split(",");return{"raw":str,"major":parseInt(versionArray[0].split(" ")[1],10),"minor":parseInt(versionArray[1],10),"revision":parseInt(versionArray[2],10),"revisionStr":versionArray[2]};};var parseStandardVersion=function(str){var descParts=str.split(/ +/);var majorMinor=descParts[2].split(/\./);var revisionStr=descParts[3];return{"raw":str,"major":parseInt(majorMinor[0],10),"minor":parseInt(majorMinor[1],10),"revisionStr":revisionStr,"revision":parseRevisionStrToInt(revisionStr)};};var parseRevisionStrToInt=function(str){return parseInt(str.replace(/[a-zA-Z]/g,""),10)||self.revision;};self.majorAtLeast=function(version){return self.major>=version;};self.minorAtLeast=function(version){return self.minor>=version;};self.revisionAtLeast=function(version){return self.revision>=version;};self.versionAtLeast=function(major){var properties=[self.major,self.minor,self.revision];var len=Math.min(properties.length,arguments.length);for(i=0;i<len;i++){if(properties[i]>=arguments[i]){if(i+1<len&&properties[i]==arguments[i]){continue;}else{return true;}}else{return false;}}};self.FlashDetect=function(){if(navigator.plugins&&navigator.plugins.length>0){var type='application/x-shockwave-flash';var mimeTypes=navigator.mimeTypes;if(mimeTypes&&mimeTypes[type]&&mimeTypes[type].enabledPlugin&&mimeTypes[type].enabledPlugin.description){var version=mimeTypes[type].enabledPlugin.description;var versionObj=parseStandardVersion(version);self.raw=versionObj.raw;self.major=versionObj.major;self.minor=versionObj.minor;self.revisionStr=versionObj.revisionStr;self.revision=versionObj.revision;self.installed=true;}}else if(navigator.appVersion.indexOf("Mac")==-1&&window.execScript){var version=-1;for(var i=0;i<activeXDetectRules.length&&version==-1;i++){var obj=getActiveXObject(activeXDetectRules[i].name);if(!obj.activeXError){self.installed=true;version=activeXDetectRules[i].version(obj);if(version!=-1){var versionObj=parseActiveXVersion(version);self.raw=versionObj.raw;self.major=versionObj.major;self.minor=versionObj.minor;self.revision=versionObj.revision;self.revisionStr=versionObj.revisionStr;}}}}}();};FlashDetect.JS_RELEASE="1.0.4";
+	</script>
+
+	<!-- mathjax supported -->
+	<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>-->
+	<!-- click dropdown -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+	$('.clicker').on("click", function(e){
+	  $(this).next('.dropdown-content').toggle();
+	  e.stopPropagation();
+	  e.preventDefault();
+	});
+	});
+	</script>
+</head>
+
+<body>
+
+<header>
+	<nav id="home-nav">
+		<ul>
+			<li><a class="nav-home" href="#" ><strong>首页</strong></a></li>
+			<li><a href="#">赞助</a></li>
+			<li><a href="#">About</a></li>
+			<li>
+		</ul>
+	</nav>
+</header>
+
+<script type="text/javascript" async src="./js/adsbygoogle.js"></script>
+<main class="tut-main">
+
+<div class="tut-post-main">
+    <!-- video section -->
+    <div class="section ie-size">
+		<!-- video section -->	
+		<div id="videogfw" class="video-container">
+			<!-- video embedding-->
+			<iframe src="http://player.bilibili.com/player.html?aid=840859379&bvid=BV1f54y1D7r1&cid=195344568&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+		</div>
+		  <!-- upper page navigation -->
+		<div class="pad-page-navigation">       
+			<div class="PageNavigation">
+			<!-- select url for next and previous -->
+			<a class="prev" href="/tutorials/machine-learning/tensorflow/5-16-A-tranfer-learning/">
+			<strong>&laquo;</strong> <i>什么是迁移学习 Transfer Learning</i></a>
+			</div>
+		</div>
+    </div>
+
+    <!-- post main content -->
+    <div class="section ie-size">
+
+      <!-- main content -->
+    <div class="tut-main-content-pad">
+        <br>
+        <h1>迁移学习 Transfer Learning</h1>
+        <div style="text-align: center;">作者:<span class="author" >莫烦</span>编辑:<span class="editor">莫烦</span>
+        <span class="publish-date">2018-02-03</span>
+        </div>
+        <!-- under title a-d-s -->
+        <div id="under-title-a-d-s">
+          <script async src="./js/adsbygoogle.js"></script>
+          <!-- under-title -->
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:250px;height:250px"
+               data-ad-client="ca-pub-4601203457616636"
+               data-ad-slot="2975922481"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+
+
+<p>学习资料:</p>
+<ul>
+  <li><a href="#" target="_blank">本节代码</a></li>
+  <li><a href="#">什么是迁移学习短视频</a></li>
+  <li>Stanford 迁移学习<a href="#" target="_blank">阅读</a></li>
+</ul>
+
+<p>在上次的<a href="./tutorials/machine-learning/tensorflow/5-16-A-tranfer-learning/">动画简介</a>中,
+我们大概了解了一些迁移学习的原理和为什么要使用迁移学习. 如果用一句话来概括迁移学习, 那务必就是:
+<strong>“为了偷懒, 在训练好了的模型上接着训练其他内容, 充分使用原模型的理解力”.</strong>
+有时候也是为了避免再次花费特别长的时间重复训练大型模型.</p>
+
+<p><a href="/static/results/tensorflow/5_16_01.png">
+ <img class="course-image lazy-img" src="./static/results/tensorflow/5_16_01.png" alt="迁移学习 Transfer Learning" title="迁移学习 Transfer Learning" />
+</a></p>
+
+<p>CNN 通常都是大型模型, 下面我们拿 CNN 来举个例子. 我训练好了一个区分男人和女人的 CNN.
+接着来了个任务, 说我下个任务是区分照片中人的年龄. 这看似完全不相干的两个模型, 但是我们却可以运用到迁移学习,
+让之前那个 CNN 当我们的初始模型, 因为区分男女的 CNN 已经对人类有了理解.
+基于这个理解开始训练, 总比完全重新开始训练强. 但是如果你下一个任务是区分飞机和大象.
+这个 CNN 可能就没那么有用了, 因为这个 CNN 可能并没有对飞机大象有任何的理解.</p>
+
+<p>这一次, 我们就来迁移一个图片分类的 CNN (<a href="https://arxiv.org/abs/1409.1556" target="_blank">VGG</a>).
+这个 VGG 在<a href="http://imagenet.stanford.edu/synset" target="_blank">1000个类别</a>中训练过.
+我们提取这个 VGG 前面的 Conv layers, 重新组建后面的 fully connected layers, 让它做一个和分类完全不相干的事.
+我们在网上下载那1000个分类数据中的猫和老虎的图片, 然后伪造一些猫和老虎长度的数据.
+最后做到让迁移后的网络分辨出猫和老虎的长度 (regressor).</p>
+
+<h2 class="tut-h2-pad" id="下载数据">下载数据
+  <a href="/tutorials/machine-learning/tensorflow/5-16-transfer-learning/#下载数据" class="headerlink" title="Permalink to this headline">¶</a>
+</h2>
+
+<p>为了达到这次的目的, 我们不需要下载所有的1000个分类的所有图片, 只要找到自己感兴趣的类就好 (老虎和猫).
+我选老虎和猫的目的就是因为他们是近亲, 还是有点像的, 可以增加点难度. 如果是飞机和大象的话, 学习难度就被降低了.</p>
+
+<p><a href="/static/results/tensorflow/5_16_02.png">
+ <img class="course-image lazy-img" src="./static/results/tensorflow/5_16_02.png" alt="迁移学习 Transfer Learning" title="迁移学习 Transfer Learning" />
+</a></p>
+
+<p>上图是这个<a href="http://imagenet.stanford.edu/synset?wnid=n02123394#" target="_blank">网址</a>,
+你能在 Download 的那个 tag 中, 找到所有图片的 urls, 我将所有老虎和猫的 urls 文件给大家放在下面:</p>
+
+<ul>
+  <li>老虎 Tiger: <a href="/static/results/tensorflow/imagenet_tiger.txt">imagenet_tiger.txt</a></li>
+  <li>猫 Kitty cat: <a href="/static/results/tensorflow/imagenet_kittycat.txt">imagenet_kittycat.txt</a></li>
+</ul>
+
+<p>我们可以编一个 <a href="https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/407_transfer_learning.py" target="_blank">Python功能</a>
+逐个下载里面的图片. 这个功能我定义成 <code class="language-plaintext highlighter-rouge">download()</code>. 下载好后就会被放在 data 这个文件夹中了.</p>
+
+<p><a href="/static/results/tensorflow/5_16_03.png">
+ <img class="course-image lazy-img" src="./static/results/tensorflow/5_16_03.png" alt="迁移学习 Transfer Learning" title="迁移学习 Transfer Learning" />
+</a></p>
+
+<p>因为有些图片url已经过期了, 所以我自己也手动过滤了一遍, 将不是图片的和404的图片给清理掉了. 因为只有两个类,
+图片不是很多, 比较好清理. 有网友说一些很多链接和图片已经”失联”, 我把我收集到的图片数据打包放在<a href="https://pan.baidu.com/s/1weg_hw-F9wVjK0J7ldjNZw" target="_blank">我的百度云</a>,
+如果用代码下图片感到有困难的同学们, 请直接在我<a href="https://pan.baidu.com/s/1weg_hw-F9wVjK0J7ldjNZw" target="_blank">百度云</a>下载吧.</p>
+
+<p>因为现在我们不是预测分类结果了, 所以我伪造了一些体长的数据. 老虎通常要比猫长, 所以它们的 distribution 就差不多是下面这种结构(单位cm).</p>
+
+<p><a href="/static/results/tensorflow/5_16_05.png">
+ <img class="course-image lazy-img" src="./static/results/tensorflow/5_16_05.png" alt="迁移学习 Transfer Learning" title="迁移学习 Transfer Learning" />
+</a></p>
+
+
+
+		<!-- donation -->
+		<div id="bottom-donation-section">
+		<br>
+		<div>
+			<a id="bottom-donation-button" href="#">点我 赞助 莫烦</a>
+		</div>
+		<br>
+		</div>
+      </div>
+    </div>
+</div>
+
+
+
+
+<!-- right side section -->
+<div class="tut-right-bar">
+    <!-- table-content-nav side section -->
+    <div class="tut-table-content-nav section">
+		<a href="./tutorials/machine-learning/tensorflow/"><p><strong>Tensorflow</strong></p></a> 
+		<ul class="tut-table-content-nav-contents">
+        <p style="text-align: left; padding:0; margin:0; color: white; font-size:1.1em; background-color: #44a371;">Tensorflow 简介</p>
+			<li class="tut-table-content-nav-li">
+            <a href="/tutorials/machine-learning/tensorflow/1-1-A-ANN-and-NN/">科普: 人工神经网络 VS 生物神经网络</a>
+            </li>
+			<li class="tut-table-content-nav-li">
+            <a href="/tutorials/machine-learning/tensorflow/1-1-B-NN/">什么是神经网络 (Neural Network)</a>
+			</li>
+            <li class="tut-table-content-nav-li">
+            <a href="/tutorials/machine-learning/tensorflow/1-1-C-gradient-descent/">神经网络 梯度下降</a>
+            </li>
+			<li class="tut-table-content-nav-li">
+            <a href="/tutorials/machine-learning/tensorflow/1-1-D-feature-representation/">科普: 神经网络的黑盒不黑</a>
+			</li>
+			<li class="tut-table-content-nav-li">
+			<a href="/tutorials/machine-learning/tensorflow/1-1-why/">为什么选 Tensorflow?</a>
+			</li>
+			<li class="tut-table-content-nav-li">
+			<a href="/tutorials/machine-learning/tensorflow/1-2-install/">Tensorflow 安装</a>
+			</li>
+			<li class="tut-table-content-nav-li">
+			<a href="/tutorials/machine-learning/tensorflow/1-3-what-does-NN-do/">神经网络在干嘛</a>
+			</li>
+		</ul>
+		<ul class="tut-table-content-nav-contents">
+        <p style="text-align: left; padding:0; margin:0; color: white; font-size:1.1em; background-color: #44a371;">Tensorflow 简介</p>
+			<li class="tut-table-content-nav-li">
+            <a href="/tutorials/machine-learning/tensorflow/1-1-A-ANN-and-NN/">科普: 人工神经网络 VS 生物神经网络</a>
+            </li>
+			<li class="tut-table-content-nav-li">
+            <a href="/tutorials/machine-learning/tensorflow/1-1-B-NN/">什么是神经网络 (Neural Network)</a>
+			</li>
+            <li class="tut-table-content-nav-li">
+            <a href="/tutorials/machine-learning/tensorflow/1-1-C-gradient-descent/">神经网络 梯度下降</a>
+            </li>
+			<li class="tut-table-content-nav-li">
+            <a href="/tutorials/machine-learning/tensorflow/1-1-D-feature-representation/">科普: 神经网络的黑盒不黑</a>
+			</li>
+			<li class="tut-table-content-nav-li">
+			<a href="/tutorials/machine-learning/tensorflow/1-1-why/">为什么选 Tensorflow?</a>
+			</li>
+			<li class="tut-table-content-nav-li">
+			<a href="/tutorials/machine-learning/tensorflow/1-2-install/">Tensorflow 安装</a>
+			</li>
+			<li class="tut-table-content-nav-li">
+			<a href="/tutorials/machine-learning/tensorflow/1-3-what-does-NN-do/">神经网络在干嘛</a>
+			</li>
+		</ul>
+    </div>
+
+    <!-- side a-d-s -->
+    
+	<div class="section">
+		<script async src="./js/adsbygoogle.js"></script>
+		<!-- side-fixed-size -->
+		<ins class="adsbygoogle"
+			 style="display:inline-block;width:300px;height:250px"
+			 data-ad-client="ca-pub-4601203457616636"
+			 data-ad-slot="8101278819"></ins>
+		<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+</div>
+</main>
+
+
+
+
+
+
+<footer>
+<p><center><strong>Email:</strong>  miclover0@163.com</center></p>
+<p><center>&copy; 2018 morvanzhou.github.io All Rights Reserved</center></p>
+</footer>
+
+
+</body>
+</html>
+

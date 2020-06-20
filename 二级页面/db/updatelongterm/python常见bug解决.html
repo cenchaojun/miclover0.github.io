@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>offline blog</title>
+<link href="../Template/css/styles.css" rel="stylesheet">
+<link rel="shortcut icon" href="../Template/images/top.jpg"/>
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+ div#content {
+  vertical-align:middle;
+  display:table-cell;
+  border:1px solid #FF0099;
+  background-color:#FFCCFF;
+  width:760px;
+ }
+</head>
+<body>
+
+
+
+<div class="mainContent2">
+    <aside>
+		<div class="avatar">
+			<a href="../../../home.html"><span>牛奶小生</span></a>
+		</div>
+		
+		<section class="topspaceinfo">
+			<h1>摘要</h1>
+			<p>主要存放python使用中常见bug的修复</p>
+		</section>
+		
+		<div class="userinfo"></div>
+	  
+	  
+	  
+	
+    </aside>
+	
+	
+    <div class="blogitem">
+		<article>
+			<h2 class="title"><a>Bug与Solution</a></h2>
+			<ul class="text">
+				<b><p>一、Assign requires shapes of both tensors to match. lhs shape= [512,5721] rhs shape= [512,169]</p></b>
+				<p>&nbsp;&nbsp;原因是自己直接拷贝之前跑过的代码的时候，顺带着连上次的日志也带过来了，所以解决办法直接把日志文件删掉，再次运行就OK了。</p>
+				<br>
+				
+				<b><p>二、UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 36: ordinal not in range(128)</p></b>
+				<p>&nbsp;&nbsp;在需要的地方添加如下代码</p>
+				<p>import sys</p>
+				<p>reload(sys)</p>
+				<p>sys.setdefaultencoding('utf8')</p>
+				<br>
+
+				
+			</ul>
+			
+			<div class="textfoot">
+				<a>此博文写于2018年12月31日晚</a>
+			</div>
+		</article> 
+        
+	</div>
+</div>
+ 
+ 
+<footer>
+	<div class="Copyright">
+		<ul><a href="#">牛奶小生</a><a href="#">似水流年</a><a href="#">执笔流年</a><a href="#">为你书写</a></ul>
+		<p>Article by Miclover</p>
+		<br/>
+	</div>
+</footer>
+</body>
+</html>

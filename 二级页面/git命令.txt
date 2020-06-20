@@ -1,0 +1,19 @@
+$ git clone https://github.com/LooEv/Hello-Blog-by-Django.git
+$ cd Hello-Blog-by-Django
+$ pip install -r requirements.txt
+$ python manage.py makemigrations
+$ python magage.py migrate
+$ python magage.py collectstatic
+$ python manage.py runserver 127.0.0.1:8001
+
+
+惠普电脑上传说明：
+
+git clone https://github.com/miclover0/miclover0.github.io.git
+git add .
+git commit -m modify
+git push
+
+
+删除github上的文件
+git rm --cached -r 文件名
