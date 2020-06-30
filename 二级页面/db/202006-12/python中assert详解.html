@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>offline blog</title>
+<link href="../Template/css/styles.css" rel="stylesheet">
+<link rel="shortcut icon" href="../Template/images/top.jpg"/>
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+
+
+
+<div class="mainContent2">
+    <aside>
+		<div class="avatar">
+			<a href="../../../home.html"><span>牛奶小生</span></a>
+		</div>
+		
+		<section class="topspaceinfo">
+			<h1>摘要</h1>
+			<p></p>
+		</section>
+		
+		<div class="userinfo"></div>
+	  
+	  
+	  
+	
+    </aside>
+	
+	
+    <div class="blogitem">
+		<article>
+			<h2 class="title"><a>python中assert详解</a></h2>
+			<ul class="text">
+				<b><p>assert基础</p></b>
+				<p>&nbsp;&nbsp;官方解释："Assert statements are a convenient way to insert debugging assertions into a program"。</p>
+				<p>&nbsp;&nbsp;通俗解释：在开发一个程序时候，与其让它运行时崩溃，不如在它出现错误条件时就崩溃（返回错误）。这时候断言assert 就显得非常有用。</p>
+				<b><p>一般用法如下：</p></b>
+				<p>&nbsp;&nbsp;assert condition,'自定义错误显示信息'</p>
+				<p>&nbsp;&nbsp;用来让程序测试这个condition，如果condition为false，那么raise一个AssertionError出来。逻辑上等同如下：</p>
+				<p>&nbsp;&nbsp;if not condition:</p>
+				<p>&nbsp;&nbsp;    raise AssertionError()</p>
+				<b><p>什么时候用assert</p></b>
+				<p>&nbsp;&nbsp;那什么时候应该使用assert？没有特定的规则，断言应该用于：</p>
+				<p>&nbsp;&nbsp;防御型的编程</p>
+				<p>&nbsp;&nbsp;运行时检查程序逻辑</p>
+				<p>&nbsp;&nbsp;检查约定</p>
+				<p>&nbsp;&nbsp;程序常量</p>
+				<p>&nbsp;&nbsp;检查文档</p>
+			</ul>
+			
+			<div class="textfoot">
+				<p>博客写于：2020-06-23</p>
+			</div>
+		</article> 
+        
+	</div>
+</div>
+ 
+ 
+<footer>
+	<div class="Copyright">
+		<ul><a href="#">牛奶小生</a><a href="#">似水流年</a><a href="#">执笔流年</a><a href="#">为你书写</a></ul>
+		<p>Article by Miclover</p>
+		<br/>
+	</div>
+</footer>
+</body>
+</html>

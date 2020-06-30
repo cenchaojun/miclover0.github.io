@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="gb2312">
 <title>offline blog</title>
 <link href="../Template/css/styles.css" rel="stylesheet">
 <link rel="shortcut icon" href="../Template/images/top.jpg"/>
@@ -16,11 +16,11 @@
 <div class="mainContent2">
     <aside>
 		<div class="avatar">
-			<a href="../../../home.html"><span>ç‰›å¥¶å°ç”Ÿ</span></a>
+			<a href="../../../home.html"><span>Å£ÄÌĞ¡Éú</span></a>
 		</div>
 		
 		<section class="topspaceinfo">
-			<h1>æ‘˜è¦</h1>
+			<h1>ÕªÒª</h1>
 			<p></p>
 		</section>
 		
@@ -34,40 +34,40 @@
 	
     <div class="blogitem">
 		<article>
-			<h2 class="title"><a>Pythonä¸­å¸¸è§å­—ç¬¦ä¸²å»é™¤ç©ºæ ¼çš„æ–¹æ³•æ€»ç»“</a></h2>
+			<h2 class="title"><a>PythonÖĞ³£¼û×Ö·û´®È¥³ı¿Õ¸ñµÄ·½·¨×Ü½á</a></h2>
 			<ul class="text">
-				<b><p>1ï¼šstrip()æ–¹æ³•ï¼Œå»é™¤å­—ç¬¦ä¸²å¼€å¤´æˆ–è€…ç»“å°¾çš„ç©ºæ ¼</p></b>
+				<b><p>1£ºstrip()·½·¨£¬È¥³ı×Ö·û´®¿ªÍ·»òÕß½áÎ²µÄ¿Õ¸ñ</p></b>
 				<p>&nbsp;&nbsp;>>> a = " a b c "</p>
 				<p>&nbsp;&nbsp;>>> a.strip()</p>
 				<p>&nbsp;&nbsp;'a b c'</p>
-				<b><p>2ï¼šlstrip()æ–¹æ³•ï¼Œå»é™¤å­—ç¬¦ä¸²å¼€å¤´çš„ç©ºæ ¼</p></b>
+				<b><p>2£ºlstrip()·½·¨£¬È¥³ı×Ö·û´®¿ªÍ·µÄ¿Õ¸ñ</p></b>
 				<p>&nbsp;&nbsp;>>> a = " a b c "</p>
 				<p>&nbsp;&nbsp;>>> a.lstrip()</p>
 				<p>&nbsp;&nbsp;'a b c '</p>
-				<b><p>3ï¼šrstrip()æ–¹æ³•ï¼Œå»é™¤å­—ç¬¦ä¸²ç»“å°¾çš„ç©ºæ ¼</p></b>
+				<b><p>3£ºrstrip()·½·¨£¬È¥³ı×Ö·û´®½áÎ²µÄ¿Õ¸ñ</p></b>
 				<p>&nbsp;&nbsp;>>> a = " a b c "</p>
 				<p>&nbsp;&nbsp;>>> a.rstrip()</p>
 				<p>&nbsp;&nbsp;' a b c'</p>
-				<b><p>4ï¼šreplace()æ–¹æ³•ï¼Œå¯ä»¥å»é™¤å…¨éƒ¨ç©ºæ ¼</p></b>
-				<p>&nbsp;&nbsp;replaceä¸»è¦ç”¨äºå­—ç¬¦ä¸²çš„æ›¿æ¢replace(old, new, count)</p>
+				<b><p>4£ºreplace()·½·¨£¬¿ÉÒÔÈ¥³ıÈ«²¿¿Õ¸ñ</p></b>
+				<p>&nbsp;&nbsp;replaceÖ÷ÒªÓÃÓÚ×Ö·û´®µÄÌæ»»replace(old, new, count)</p>
 				<p>&nbsp;&nbsp;>>> a = " a b c "</p>
 				<p>&nbsp;&nbsp;>>> a.replace(" ", "")</p>
 				<p>&nbsp;&nbsp;'abc'</p>
-				<b><p>5: join()æ–¹æ³•+split()æ–¹æ³•ï¼Œå¯ä»¥å»é™¤å…¨éƒ¨ç©ºæ ¼</p></b>
-				<p>&nbsp;&nbsp;joinä¸ºå­—ç¬¦å­—ç¬¦ä¸²åˆæˆä¼ å…¥ä¸€ä¸ªå­—ç¬¦ä¸²åˆ—è¡¨ï¼Œsplitç”¨äºå­—ç¬¦ä¸²åˆ†å‰²å¯ä»¥æŒ‰è§„åˆ™è¿›è¡Œåˆ†å‰²</p>
+				<b><p>5: join()·½·¨+split()·½·¨£¬¿ÉÒÔÈ¥³ıÈ«²¿¿Õ¸ñ</p></b>
+				<p>&nbsp;&nbsp;joinÎª×Ö·û×Ö·û´®ºÏ³É´«ÈëÒ»¸ö×Ö·û´®ÁĞ±í£¬splitÓÃÓÚ×Ö·û´®·Ö¸î¿ÉÒÔ°´¹æÔò½øĞĞ·Ö¸î</p>
 				<p>&nbsp;&nbsp;>>> a = " a b c "</p>
-				<p>&nbsp;&nbsp;>>> b = a.split()  # å­—ç¬¦ä¸²æŒ‰ç©ºæ ¼åˆ†å‰²æˆåˆ—è¡¨</p>
+				<p>&nbsp;&nbsp;>>> b = a.split()  # ×Ö·û´®°´¿Õ¸ñ·Ö¸î³ÉÁĞ±í</p>
 				<p>&nbsp;&nbsp;>>> b ['a', 'b', 'c']</p>
-				<p>&nbsp;&nbsp;>>> c = "".join(b) # ä½¿ç”¨ä¸€ä¸ªç©ºå­—ç¬¦ä¸²åˆæˆåˆ—è¡¨å†…å®¹ç”Ÿæˆæ–°çš„å­—ç¬¦ä¸²</p>
+				<p>&nbsp;&nbsp;>>> c = "".join(b) # Ê¹ÓÃÒ»¸ö¿Õ×Ö·û´®ºÏ³ÉÁĞ±íÄÚÈİÉú³ÉĞÂµÄ×Ö·û´®</p>
 				<p>&nbsp;&nbsp;>>> c 'abc'</p>
-				<p>&nbsp;&nbsp;å¿«æ·ç”¨æ³•</p>
+				<p>&nbsp;&nbsp;¿ì½İÓÃ·¨</p>
 				<p>&nbsp;&nbsp;>>> a = " a b c "</p>
 				<p>&nbsp;&nbsp;>>> "".join(a.split())</p>
 				<p>&nbsp;&nbsp;'abc'</p>
 			</ul>
 			
 			<div class="textfoot">
-				<p>åšå®¢å†™äºï¼š2020-06-10</p>
+				<p>²©¿ÍĞ´ÓÚ£º2020-06-10</p>
 			</div>
 		</article> 
         
@@ -77,7 +77,7 @@
  
 <footer>
 	<div class="Copyright">
-		<ul><a href="#">ç‰›å¥¶å°ç”Ÿ</a><a href="#">ä¼¼æ°´æµå¹´</a><a href="#">æ‰§ç¬”æµå¹´</a><a href="#">ä¸ºä½ ä¹¦å†™</a></ul>
+		<ul><a href="#">Å£ÄÌĞ¡Éú</a><a href="#">ËÆË®Á÷Äê</a><a href="#">Ö´±ÊÁ÷Äê</a><a href="#">ÎªÄãÊéĞ´</a></ul>
 		<p>Article by Miclover</p>
 		<br/>
 	</div>
