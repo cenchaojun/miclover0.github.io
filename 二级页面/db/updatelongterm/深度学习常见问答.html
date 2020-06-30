@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="gb2312">
+<meta charset="utf-8">
 <title>offline blog</title>
 <link href="../Template/css/styles.css" rel="stylesheet">
 <link rel="shortcut icon" href="../Template/images/top.jpg"/>
@@ -16,12 +16,12 @@
 <div class="mainContent2">
     <aside>
 		<div class="avatar">
-			<a href="../../../home.html"><span>ţ��С��</span></a>
+			<a href="../../../home.html"><span>牛奶小生</span></a>
 		</div>
 		
 		<section class="topspaceinfo">
-			<h1>ժҪ</h1>
-			<p>���ѧϰ����С֪ʶ����ʴ�</p>
+			<h1>摘要</h1>
+			<p>深度学习常见小知识点的问答</p>
 		</section>
 		
 		<div class="userinfo"></div>
@@ -34,18 +34,18 @@
 	
     <div class="blogitem">
 		<article>
-			<h2 class="title"><a>���ѧϰ�����ʴ�</a></h2>
+			<h2 class="title"><a>深度学习常见问答</a></h2>
 			<ul class="text">
-				<b><p>Q1��Top-1��Top-5����</p></b>
-				<p>&nbsp;&nbsp;����֪��ImageNet�д��1000�����࣬��ģ��Ԥ��ĳ��ͼƬʱ�������1000�������ʴӸߵ��͵��������
-				Top-1 Accuracy��ָ������һ�������ʵ�ʽ�������׼ȷ�ʣ���Top-5 Accuracy��ָ����ǰ���������ʵ�ʽ����׼ȷ�ʡ�</p>
-				<b><p>Q2��Ŀ�������</p></b>
-				<p>&nbsp;&nbsp;<strong>���׶Σ�Two Stages����</strong>�������㷨��algorithm������һϵ����Ϊ�����ĺ�ѡ����ͨ���������������������Sample�����ࡣ</p>
-				<p>&nbsp;&nbsp;�������㷨��R-CNN��Fast R-CNN��Faster R-CNN�ȵ�</p>
-				<p>&nbsp;&nbsp;<strong>һ�׶Σ�One Stage ����</strong>����Ҫ������ѡ��ֱ�ӽ�Ŀ���λ������ת��Ϊ�ع飨Regression�����⴦��(Process)��</p>
-				<p>&nbsp;&nbsp;�������㷨��YOLO��SSD�ȵȡ�</p>
-				<b><p>Q3������ʶ������������</p></b>
-				<p>&nbsp;&nbsp;�����������񼴸������������ͼ���Զ���λ���沿�ؼ������㣬���۾����Ǽ⡢��ǵ㡢üë�Լ�����������������ȣ�����ͼ��ʾ��</p>
+				<b><p>Q1：Top-1和Top-5区别？</p></b>
+				<p>&nbsp;&nbsp;我们知道ImageNet有大概1000个分类，而模型预测某张图片时，会给出1000个按概率从高到低的类别排名
+				Top-1 Accuracy是指排名第一的类别与实际结果相符的准确率，而Top-5 Accuracy是指排名前五的类别包含实际结果的准确率。</p>
+				<b><p>Q2：目标检测分类</p></b>
+				<p>&nbsp;&nbsp;<strong>两阶段（Two Stages）：</strong>首先由算法（algorithm）生成一系列作为样本的候选框，再通过卷积神经网络进行样本（Sample）分类。</p>
+				<p>&nbsp;&nbsp;常见的算法有R-CNN、Fast R-CNN、Faster R-CNN等等</p>
+				<p>&nbsp;&nbsp;<strong>一阶段（One Stage ）：</strong>不需要产生候选框，直接将目标框定位的问题转化为回归（Regression）问题处理(Process)。</p>
+				<p>&nbsp;&nbsp;常见的算法有YOLO、SSD等等。</p>
+				<b><p>Q3：人脸识别中人脸对齐</p></b>
+				<p>&nbsp;&nbsp;人脸对齐任务即根据输入的人脸图像，自动定位出面部关键特征点，如眼睛、鼻尖、嘴角点、眉毛以及人脸各部件轮廓点等，如下图所示。</p>
 				<p class="textimg"><img src="./img/deep_0000.png"></p>
 				
 				
@@ -55,7 +55,7 @@
 			</ul>
 			
 			<div class="textfoot">
-				<a>�˲���д��2018��12��31����</a>
+				<a>此博文写于2018年12月31日晚</a>
 			</div>
 		</article> 
         
@@ -65,7 +65,7 @@
  
 <footer>
 	<div class="Copyright">
-		<ul><a href="#">ţ��С��</a><a href="#">��ˮ����</a><a href="#">ִ������</a><a href="#">Ϊ����д</a></ul>
+		<ul><a href="#">牛奶小生</a><a href="#">似水流年</a><a href="#">执笔流年</a><a href="#">为你书写</a></ul>
 		<p>Article by Miclover</p>
 		<br/>
 	</div>
