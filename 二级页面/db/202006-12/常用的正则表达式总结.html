@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>offline blog</title>
+<link href="../Template/css/styles.css" rel="stylesheet">
+<link rel="shortcut icon" href="../Template/images/top.jpg"/>
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+
+
+
+<div class="mainContent2">
+    <aside>
+		<div class="avatar">
+			<a href="../../../home.html"><span>牛奶小生</span></a>
+		</div>
+		
+		<section class="topspaceinfo">
+			<h1>摘要</h1>
+			<p></p>
+		</section>
+		
+		<div class="userinfo"></div>
+	  
+	  
+	  
+	
+    </aside>
+	
+	
+    <div class="blogitem">
+		<article>
+			<h2 class="title"><a>常用的正则表达式总结</a></h2>
+			<ul class="text">
+				<p>&nbsp;&nbsp;非负整数：^\d+$</p>
+				<p>&nbsp;&nbsp;正整数：^[0-9]*[1-9][0-9]*$</p>
+				<p>&nbsp;&nbsp;非正整数：^((-\d+)|(0+))$</p>
+				<p>&nbsp;&nbsp;负整数：^-[0-9]*[1-9][0-9]*$</p>
+				<p>&nbsp;&nbsp;整数：^-?\d+$</p>
+				<p>&nbsp;&nbsp;非负浮点数：^\d+(\.\d+)?$</p>
+				<p>&nbsp;&nbsp;正浮点数 : ^((0-9)+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)$</p>
+				<p>&nbsp;&nbsp;非正浮点数：^((-\d+\.\d+)?)|(0+(\.0+)?))$</p>
+				<p>&nbsp;&nbsp;负浮点数：^(-((正浮点数正则式)))$</p>
+				<p>&nbsp;&nbsp;英文字符串：^[A-Za-z]+$</p>
+				<p>&nbsp;&nbsp;英文大写串：^[A-Z]+$</p>
+				<p>&nbsp;&nbsp;英文小写串：^[a-z]+$</p>
+				<p>&nbsp;&nbsp;英文字符数字串：^[A-Za-z0-9]+$</p>
+				<p>&nbsp;&nbsp;英数字加下划线串：^\w+$</p>
+				<p>&nbsp;&nbsp;E-mail地址：^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$</p>
+				<p>&nbsp;&nbsp;URL：^[a-zA-Z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\s*)?$</p>
+				<p>&nbsp;&nbsp;或：^http:\/\/[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=\?%\-&_~`@[\]\':+!]*([^<>\"\"])*$</p>
+				<p>&nbsp;&nbsp;邮政编码：^[1-9]\d{5}$</p>
+				<p>&nbsp;&nbsp;中文：^[\u0391-\uFFE5]+$</p>
+				<p>&nbsp;&nbsp;电话号码：^((\(\d{2,3}\))|(\d{3}\-))?(\(0\d{2,3}\)|0\d{2,3}-)?[1-9]\d{6,7}(\-\d{1,4})?$</p>
+				<p>&nbsp;&nbsp;手机号码：^((\(\d{2,3}\))|(\d{3}\-))?13\d{9}$</p>
+				<p>&nbsp;&nbsp;双字节字符(包括汉字在内)：^\x00-\xff</p>
+				<p>&nbsp;&nbsp;匹配首尾空格：(^\s*)|(\s*$)（像vbscript那样的trim函数）</p>
+				<p>&nbsp;&nbsp;匹配HTML标记：<(.*)>.*<\/\1>|<(.*) \/></p>
+				<p>&nbsp;&nbsp;匹配空行：\n[\s| ]*\r</p>
+				<p>&nbsp;&nbsp;提取信息中的网络链接：(h|H)(r|R)(e|E)(f|F)  *=  *('|")?(\w|\\|\/|\.)+('|"|  *|>)?</p>
+				<p>&nbsp;&nbsp;提取信息中的邮件地址：\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</p>
+				<p>&nbsp;&nbsp;提取信息中的图片链接：(s|S)(r|R)(c|C)  *=  *('|")?(\w|\\|\/|\.)+('|"|  *|>)?</p>
+				<p>&nbsp;&nbsp;提取信息中的IP地址：(\d+)\.(\d+)\.(\d+)\.(\d+)</p>
+				<p>&nbsp;&nbsp;提取信息中的中国手机号码：(86)*0*13\d{9}</p>
+				<p>&nbsp;&nbsp;提取信息中的中国固定电话号码：(\(\d{3,4}\)|\d{3,4}-|\s)?\d{8}</p>
+				<p>&nbsp;&nbsp;提取信息中的中国电话号码（包括移动和固定电话）：(\(\d{3,4}\)|\d{3,4}-|\s)?\d{7,14}</p>
+				<p>&nbsp;&nbsp;提取信息中的中国邮政编码：[1-9]{1}(\d+){5}</p>
+				<p>&nbsp;&nbsp;提取信息中的浮点数（即小数）：(-?\d*)\.?\d+</p>
+				<p>&nbsp;&nbsp;提取信息中的任何数字 ：(-?\d*)(\.\d+)?</p>
+				<p>&nbsp;&nbsp;IP：(\d+)\.(\d+)\.(\d+)\.(\d+)</p>
+				<p>&nbsp;&nbsp;电话区号：/^0\d{2,3}$/</p>
+				<p>&nbsp;&nbsp;腾讯QQ号：^[1-9]*[1-9][0-9]*$</p>
+				<p>&nbsp;&nbsp;帐号(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$</p>
+				<p>&nbsp;&nbsp;中文、英文、数字及下划线：^[\u4e00-\u9fa5_a-zA-Z0-9]+$</p>
+				<p>&nbsp;&nbsp;匹配中文字符的正则表达式： [\u4e00-\u9fa5]</p>
+				<p>&nbsp;&nbsp;匹配双字节字符(包括汉字在内)：[^\x00-\xff]</p>
+				<p>&nbsp;&nbsp;匹配空行的正则表达式：\n[\s| ]*\r</p>
+				<p>&nbsp;&nbsp;匹配HTML标记的正则表达式：/<(.*)>.*<\/\1>|<(.*) \/>/</p>
+				<p>&nbsp;&nbsp;sql语句：^(select|drop|delete|create|update|insert).*$</p>
+				<p>&nbsp;&nbsp;匹配首尾空格的正则表达式：(^\s*)|(\s*$)</p>
+				<p>&nbsp;&nbsp;匹配Email地址的正则表达式：\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</p>
+			</ul>
+			
+			<div class="textfoot">
+				<p>博客写于：2020-07-04</p>
+			</div>
+		</article> 
+        
+	</div>
+</div>
+ 
+ 
+<footer>
+	<div class="Copyright">
+		<ul><a href="#">牛奶小生</a><a href="#">似水流年</a><a href="#">执笔流年</a><a href="#">为你书写</a></ul>
+		<p>Article by Miclover</p>
+		<br/>
+	</div>
+</footer>
+</body>
+</html>

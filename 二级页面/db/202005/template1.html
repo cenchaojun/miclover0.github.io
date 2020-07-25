@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="gb2312">
+<meta charset="utf-8">
 <title>offline blog</title>
 <link href="../Template/css/styles.css" rel="stylesheet">
 <link rel="shortcut icon" href="../Template/images/top.jpg"/>
@@ -16,12 +16,12 @@
 <div class="mainContent2">
     <aside>
 		<div class="avatar">
-			<a href="../../../home.html"><span>ţ��С��</span></a>
+			<a href="../../../home.html"><span>牛奶小生</span></a>
 		</div>
 		
 		<section class="topspaceinfo">
-			<h1>ժҪ</h1>
-			<p>Ը�˿������Լ����֣����˽������Լ����µ�һ����һ��˳˳�����ģ��������ĵ�...</p>
+			<h1>摘要</h1>
+			<p>愿此刻新年自己快乐，家人健康，自己在新的一年里一切顺顺利利的，开开心心的...</p>
 		</section>
 		
 		<div class="userinfo"></div>
@@ -34,40 +34,40 @@
 	
     <div class="blogitem">
 		<article>
-			<h2 class="title"><a>#IPv6��IPv4����ͷ����ʽ
+			<h2 class="title"><a>#IPv6和IPv4基本头部格式
 </a></h2>
 			<ul class="text">
-				<p>&nbsp;&nbsp;����IPv4�����д��ڵ����⣬IPv6����ͷ��ʽ��IPv4��Ƚ�����һЩ�Ķ���IPv6ͷ���ṹ��ѭ�����¹���
+				<p>&nbsp;&nbsp;根据IPv4报文中存在的问题，IPv6报文头格式与IPv4相比进行了一些改动。IPv6头部结构遵循以下新规则：
 </p>
-				<p>&nbsp;&nbsp;����ͷ���Ĺ̶����ȣ�IPv6�Ļ�������ͷ���ȹ̶�Ϊ40�ֽڣ�ѡ������ӻ�������ͷ��ȥ���ˡ�
+				<p>&nbsp;&nbsp;基本头部的固定长度：IPv6的基本报文头长度固定为40字节，选项和填充从基本报文头中去除了。
 </p>
-				<p>&nbsp;&nbsp;�ֶν���������Դ�ڵ㴦�����ڷ���IPv6����ǰ��Դִ��PMTU���֣���·�����ӷֶη���������н��ѳ�����
+				<p>&nbsp;&nbsp;分段仅由流量的源节点处理：在发送IPv6流量前，源执行PMTU发现，将路由器从分段分组的任务中解脱出来。
 </p>
-				<p>&nbsp;&nbsp;ȥ��ͷ��У��ͣ����ڱ仯��TTLֵ�����������ÿ���ڵ�������¼���IPͷ��У��ͣ���˼�����·������Դ����������������·��������ߺ�32λѭ������У��֧�֣��Լ���4��У����ṩ���㹻�ı��������IPͷ��У��Ͳ��ٱ��衣
+				<p>&nbsp;&nbsp;去除头部校验和：由于变化的TTL值，交换分组的每个节点必须重新计算IP头部校验和，因此加重了路由器资源负担。由于数据链路技术的提高和32位循环冗余校验支持，以及第4层校验和提供了足够的保护，因而IP头部校验和不再必需。
 </p>
-				<p>&nbsp;&nbsp;�������Ϲ���RFC2460����������IPv6ͷ���ֶΣ�
+				<p>&nbsp;&nbsp;基于以上规则，RFC2460定义了下列IPv6头部字段：
 </p>
-				<p>&nbsp;&nbsp;�汾��4λ����IP�汾������Ϊ6��
+				<p>&nbsp;&nbsp;版本（4位）：IP版本，设置为6。
 </p>
-				<p>&nbsp;&nbsp;�������ͣ�8λ����ִ����IPv4ͷ���еķ���������ͬ�Ĺ��ܡ�
+				<p>&nbsp;&nbsp;流量类型（8位）：执行与IPv4头部中的服务类型相同的功能。
 </p>
-				<p>&nbsp;&nbsp;����ǩ��20λ�������ڱ�ʶһ��������Ŀ���ǣ�����Ҫ�ڷ����н������������·��������ʶ��Ӧ�������Ʒ�ʽ�����ķ��顣�ֶ���Դ���ã���ת��·���ϲ�Ӧ�ñ��޸ġ�
+				<p>&nbsp;&nbsp;流标签（20位）：用于标识一个流，其目的是：不需要在分组中进行深度搜索，路由器就能识别应该以类似方式处理的分组。字段由源设置，在转发路由上不应该被修改。
 </p>
-				<p>&nbsp;&nbsp;���ɳ��ȣ�16λ������Ϊͷ�����ȹ̶�Ϊ40�ֽڣ�����ָ�����ɳ��Ⱦ���ȷ���������ĳ��ȡ�
+				<p>&nbsp;&nbsp;净荷长度（16位）：因为头部长度固定为40字节，所以指明净荷长度就能确定这个分组的长度。
 </p>
-				<p>&nbsp;&nbsp;��һ��ͷ����8λ�������ֶ���չ��IPv4ͷ����Э��ŵĹ��ܡ�
+				<p>&nbsp;&nbsp;下一个头部（8位）：本字段扩展了IPv4头部中协议号的功能。
 </p>
-				<p>&nbsp;&nbsp;�������ƣ�8λ�������ֶ�������IPv4��TTL����������IP���ݱ������ܾ��������������
+				<p>&nbsp;&nbsp;跳数限制（8位）：该字段类似于IPv4的TTL。它定义了IP数据报文所能经过的最大跳数。
 </p>
-				<p>&nbsp;&nbsp;ԴIPv6��ַ��128λ����
+				<p>&nbsp;&nbsp;源IPv6地址（128位）。
 </p>
-				<p>&nbsp;&nbsp;Ŀ��IPv6��ַ��128λ����
+				<p>&nbsp;&nbsp;目的IPv6地址（128位）。
 </p>
-				<p>&nbsp;&nbsp;IPv4��IPv6�ı�ͷ�ṹ��ͼ2-6��ͼ2-7��ʾ��</p>
+				<p>&nbsp;&nbsp;IPv4和IPv6的报头结构如图2-6和图2-7所示。</p>
 			</ul>
 			
 			<div class="textfoot">
-				<p>����д�ڣ�2020-05-28</p>
+				<p>博客写于：2020-05-28</p>
 			</div>
 		</article> 
         
@@ -77,7 +77,7 @@
  
 <footer>
 	<div class="Copyright">
-		<ul><a href="#">ţ��С��</a><a href="#">��ˮ����</a><a href="#">ִ������</a><a href="#">Ϊ����д</a></ul>
+		<ul><a href="#">牛奶小生</a><a href="#">似水流年</a><a href="#">执笔流年</a><a href="#">为你书写</a></ul>
 		<p>Article by Miclover</p>
 		<br/>
 	</div>
