@@ -3,7 +3,7 @@ footer {
   footer > div {
     margin: 0 auto;
     padding: 40px 0 80px 0;
-    width: 1160px; }
+    width: 1000px; }
 
 .footer-top {
   height: 60px;
@@ -11,7 +11,7 @@ footer {
   margin-bottom: 25px; }
   .footer-top > li {
     float: left;
-    width: 360px;
+    width: 300px;
     height: 112px;
     padding: 0 40px; }
     .footer-top > li > table {
@@ -38,7 +38,7 @@ footer {
       .footer-top > li:nth-child(2) > table > tbody > tr:first-child {
         height: 30px; }
   .footer-top > li:last-child {
-    width: 270px;
+    width: 200px;
     height: 80px;
     padding-right: 0; }
     .footer-top > li:last-child > ul {
